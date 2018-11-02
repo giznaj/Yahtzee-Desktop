@@ -60,7 +60,7 @@ namespace YahtzeeApplication
                 if (parentControl is RichTextBox)
                 {
                     RichTextBox richText = (RichTextBox)parentControl;
-        ..            richText.Text = null;
+                    richText.Text = null;
                 }
 
                 // Called when a new game is started.  Clears all selections in all combobox controls

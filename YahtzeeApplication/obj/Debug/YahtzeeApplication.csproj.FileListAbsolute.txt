@@ -12,7 +12,6 @@ E:\visual studio projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\obj\Debu
 E:\workspaces\visual studio projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\bin\Debug\YahtzeeApplication.exe.config
 E:\workspaces\visual studio projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\bin\Debug\YahtzeeApplication.exe
 E:\workspaces\visual studio projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\bin\Debug\YahtzeeApplication.pdb
-E:\workspaces\visual studio projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\obj\Debug\YahtzeeApplication.csprojAssemblyReference.cache
 E:\workspaces\visual studio projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\obj\Debug\YahtzeeApplication.HelpScreen.resources
 E:\workspaces\visual studio projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\obj\Debug\YahtzeeApplication.SplashScreen.resources
 E:\workspaces\visual studio projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\obj\Debug\YahtzeeApplication.GameBoard.resources
