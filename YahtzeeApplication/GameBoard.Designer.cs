@@ -1,0 +1,771 @@
+﻿namespace YahtzeeApplication
+{
+    partial class GameBoard
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.gameLogTextBox = new System.Windows.Forms.RichTextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.textRunScore = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textRunBonus = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBoxChance = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSixes = new System.Windows.Forms.PictureBox();
+            this.pictureBoxYahtzee = new System.Windows.Forms.PictureBox();
+            this.pictureBoxThreeKind = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFourKind = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFours = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFourStraight = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFiveStraight = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFullHouse = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFives = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOnes = new System.Windows.Forms.PictureBox();
+            this.pictureBoxThrees = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.picDiceBox1 = new System.Windows.Forms.PictureBox();
+            this.picDiceBox2 = new System.Windows.Forms.PictureBox();
+            this.picDiceBox3 = new System.Windows.Forms.PictureBox();
+            this.picDiceBox4 = new System.Windows.Forms.PictureBox();
+            this.picDiceBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRolls = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTwos = new System.Windows.Forms.PictureBox();
+            this.checkBoxWarning = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnNewGame = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnRollDice = new System.Windows.Forms.Button();
+            this.btnNextTurn = new System.Windows.Forms.Button();
+            this.groupBoxButtons = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBoxRoll = new System.Windows.Forms.GroupBox();
+            this.gUIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSixes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYahtzee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxThreeKind)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFourKind)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFourStraight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFiveStraight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFullHouse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFives)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxThrees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRolls)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTwos)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBoxButtons.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBoxRoll.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gUIBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // gameLogTextBox
+            // 
+            this.gameLogTextBox.Location = new System.Drawing.Point(6, 39);
+            this.gameLogTextBox.Name = "gameLogTextBox";
+            this.gameLogTextBox.ReadOnly = true;
+            this.gameLogTextBox.Size = new System.Drawing.Size(434, 197);
+            this.gameLogTextBox.TabIndex = 5;
+            this.gameLogTextBox.Text = "";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(20, 82);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(48, 17);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Hold";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(107, 82);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(48, 17);
+            this.checkBox2.TabIndex = 8;
+            this.checkBox2.Text = "Hold";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(195, 82);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(48, 17);
+            this.checkBox3.TabIndex = 9;
+            this.checkBox3.Text = "Hold";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(284, 82);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(48, 17);
+            this.checkBox4.TabIndex = 10;
+            this.checkBox4.Text = "Hold";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(370, 82);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(48, 17);
+            this.checkBox5.TabIndex = 11;
+            this.checkBox5.Text = "Hold";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // textRunScore
+            // 
+            this.textRunScore.Enabled = false;
+            this.textRunScore.Location = new System.Drawing.Point(164, 32);
+            this.textRunScore.Name = "textRunScore";
+            this.textRunScore.Size = new System.Drawing.Size(69, 20);
+            this.textRunScore.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(161, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Running Score";
+            // 
+            // textRunBonus
+            // 
+            this.textRunBonus.Enabled = false;
+            this.textRunBonus.Location = new System.Drawing.Point(50, 32);
+            this.textRunBonus.Name = "textRunBonus";
+            this.textRunBonus.Size = new System.Drawing.Size(66, 20);
+            this.textRunBonus.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Running Bonus";
+            // 
+            // pictureBoxChance
+            // 
+            this.pictureBoxChance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxChance.Location = new System.Drawing.Point(138, 210);
+            this.pictureBoxChance.Name = "pictureBoxChance";
+            this.pictureBoxChance.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxChance.TabIndex = 27;
+            this.pictureBoxChance.TabStop = false;
+            this.pictureBoxChance.Click += new System.EventHandler(this.pictureBoxChance_Click);
+            // 
+            // pictureBoxSixes
+            // 
+            this.pictureBoxSixes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxSixes.Location = new System.Drawing.Point(36, 209);
+            this.pictureBoxSixes.Name = "pictureBoxSixes";
+            this.pictureBoxSixes.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxSixes.TabIndex = 29;
+            this.pictureBoxSixes.TabStop = false;
+            this.pictureBoxSixes.Click += new System.EventHandler(this.pictureBoxSixes_Click);
+            // 
+            // pictureBoxYahtzee
+            // 
+            this.pictureBoxYahtzee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxYahtzee.Location = new System.Drawing.Point(138, 248);
+            this.pictureBoxYahtzee.Name = "pictureBoxYahtzee";
+            this.pictureBoxYahtzee.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxYahtzee.TabIndex = 30;
+            this.pictureBoxYahtzee.TabStop = false;
+            this.pictureBoxYahtzee.Click += new System.EventHandler(this.pictureBoxYahtzee_Click);
+            // 
+            // pictureBoxThreeKind
+            // 
+            this.pictureBoxThreeKind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxThreeKind.Location = new System.Drawing.Point(138, 19);
+            this.pictureBoxThreeKind.Name = "pictureBoxThreeKind";
+            this.pictureBoxThreeKind.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxThreeKind.TabIndex = 31;
+            this.pictureBoxThreeKind.TabStop = false;
+            this.pictureBoxThreeKind.Click += new System.EventHandler(this.pictureBoxThreeKind_Click);
+            // 
+            // pictureBoxFourKind
+            // 
+            this.pictureBoxFourKind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxFourKind.Location = new System.Drawing.Point(138, 57);
+            this.pictureBoxFourKind.Name = "pictureBoxFourKind";
+            this.pictureBoxFourKind.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxFourKind.TabIndex = 32;
+            this.pictureBoxFourKind.TabStop = false;
+            this.pictureBoxFourKind.Click += new System.EventHandler(this.pictureBoxFourKind_Click);
+            // 
+            // pictureBoxFours
+            // 
+            this.pictureBoxFours.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxFours.Location = new System.Drawing.Point(36, 133);
+            this.pictureBoxFours.Name = "pictureBoxFours";
+            this.pictureBoxFours.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxFours.TabIndex = 39;
+            this.pictureBoxFours.TabStop = false;
+            this.pictureBoxFours.Click += new System.EventHandler(this.pictureBoxFours_Click);
+            // 
+            // pictureBoxFourStraight
+            // 
+            this.pictureBoxFourStraight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxFourStraight.Location = new System.Drawing.Point(138, 94);
+            this.pictureBoxFourStraight.Name = "pictureBoxFourStraight";
+            this.pictureBoxFourStraight.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxFourStraight.TabIndex = 38;
+            this.pictureBoxFourStraight.TabStop = false;
+            this.pictureBoxFourStraight.Click += new System.EventHandler(this.pictureBoxFourStraight_Click);
+            // 
+            // pictureBoxFiveStraight
+            // 
+            this.pictureBoxFiveStraight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxFiveStraight.Location = new System.Drawing.Point(138, 132);
+            this.pictureBoxFiveStraight.Name = "pictureBoxFiveStraight";
+            this.pictureBoxFiveStraight.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxFiveStraight.TabIndex = 37;
+            this.pictureBoxFiveStraight.TabStop = false;
+            this.pictureBoxFiveStraight.Click += new System.EventHandler(this.pictureBoxFiveStraight_Click);
+            // 
+            // pictureBoxFullHouse
+            // 
+            this.pictureBoxFullHouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxFullHouse.Location = new System.Drawing.Point(138, 172);
+            this.pictureBoxFullHouse.Name = "pictureBoxFullHouse";
+            this.pictureBoxFullHouse.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxFullHouse.TabIndex = 36;
+            this.pictureBoxFullHouse.TabStop = false;
+            this.pictureBoxFullHouse.Click += new System.EventHandler(this.pictureBoxFullHouse_Click);
+            // 
+            // pictureBoxFives
+            // 
+            this.pictureBoxFives.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxFives.Location = new System.Drawing.Point(36, 171);
+            this.pictureBoxFives.Name = "pictureBoxFives";
+            this.pictureBoxFives.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxFives.TabIndex = 35;
+            this.pictureBoxFives.TabStop = false;
+            this.pictureBoxFives.Click += new System.EventHandler(this.pictureBoxFives_Click);
+            // 
+            // pictureBoxOnes
+            // 
+            this.pictureBoxOnes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxOnes.Location = new System.Drawing.Point(36, 19);
+            this.pictureBoxOnes.Name = "pictureBoxOnes";
+            this.pictureBoxOnes.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxOnes.TabIndex = 34;
+            this.pictureBoxOnes.TabStop = false;
+            this.pictureBoxOnes.Click += new System.EventHandler(this.pictureBoxOnes_Click);
+            // 
+            // pictureBoxThrees
+            // 
+            this.pictureBoxThrees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxThrees.Location = new System.Drawing.Point(36, 95);
+            this.pictureBoxThrees.Name = "pictureBoxThrees";
+            this.pictureBoxThrees.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxThrees.TabIndex = 33;
+            this.pictureBoxThrees.TabStop = false;
+            this.pictureBoxThrees.Click += new System.EventHandler(this.pictureBoxThrees_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(72, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Ones";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(72, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Twos";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(74, 95);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Threes";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(74, 132);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Fours";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(74, 170);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.TabIndex = 47;
+            this.label8.Text = "Fives";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(74, 210);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 13);
+            this.label9.TabIndex = 48;
+            this.label9.Text = "Sixes";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(176, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 13);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "3 of a Kind";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(176, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "4 of a Kind";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(176, 94);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 13);
+            this.label12.TabIndex = 51;
+            this.label12.Text = "4 Card Straight";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(176, 132);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 13);
+            this.label13.TabIndex = 52;
+            this.label13.Text = "5 Card Straight";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(176, 172);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 13);
+            this.label14.TabIndex = 53;
+            this.label14.Text = "Full House";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(176, 210);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 13);
+            this.label15.TabIndex = 54;
+            this.label15.Text = "Chance";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(176, 248);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(46, 13);
+            this.label16.TabIndex = 55;
+            this.label16.Text = "Yahtzee";
+            // 
+            // picDiceBox1
+            // 
+            this.picDiceBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picDiceBox1.Location = new System.Drawing.Point(20, 27);
+            this.picDiceBox1.Name = "picDiceBox1";
+            this.picDiceBox1.Size = new System.Drawing.Size(55, 55);
+            this.picDiceBox1.TabIndex = 56;
+            this.picDiceBox1.TabStop = false;
+            // 
+            // picDiceBox2
+            // 
+            this.picDiceBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picDiceBox2.Location = new System.Drawing.Point(107, 27);
+            this.picDiceBox2.Name = "picDiceBox2";
+            this.picDiceBox2.Size = new System.Drawing.Size(55, 55);
+            this.picDiceBox2.TabIndex = 57;
+            this.picDiceBox2.TabStop = false;
+            // 
+            // picDiceBox3
+            // 
+            this.picDiceBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picDiceBox3.Location = new System.Drawing.Point(195, 27);
+            this.picDiceBox3.Name = "picDiceBox3";
+            this.picDiceBox3.Size = new System.Drawing.Size(55, 55);
+            this.picDiceBox3.TabIndex = 58;
+            this.picDiceBox3.TabStop = false;
+            // 
+            // picDiceBox4
+            // 
+            this.picDiceBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picDiceBox4.Location = new System.Drawing.Point(284, 27);
+            this.picDiceBox4.Name = "picDiceBox4";
+            this.picDiceBox4.Size = new System.Drawing.Size(55, 55);
+            this.picDiceBox4.TabIndex = 59;
+            this.picDiceBox4.TabStop = false;
+            // 
+            // picDiceBox5
+            // 
+            this.picDiceBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picDiceBox5.Location = new System.Drawing.Point(370, 27);
+            this.picDiceBox5.Name = "picDiceBox5";
+            this.picDiceBox5.Size = new System.Drawing.Size(55, 55);
+            this.picDiceBox5.TabIndex = 60;
+            this.picDiceBox5.TabStop = false;
+            // 
+            // pictureBoxRolls
+            // 
+            this.pictureBoxRolls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxRolls.Location = new System.Drawing.Point(16, 27);
+            this.pictureBoxRolls.Name = "pictureBoxRolls";
+            this.pictureBoxRolls.Size = new System.Drawing.Size(62, 62);
+            this.pictureBoxRolls.TabIndex = 61;
+            this.pictureBoxRolls.TabStop = false;
+            // 
+            // pictureBoxTwos
+            // 
+            this.pictureBoxTwos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxTwos.Location = new System.Drawing.Point(36, 57);
+            this.pictureBoxTwos.Name = "pictureBoxTwos";
+            this.pictureBoxTwos.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxTwos.TabIndex = 62;
+            this.pictureBoxTwos.TabStop = false;
+            this.pictureBoxTwos.Click += new System.EventHandler(this.pictureBoxTwos_Click);
+            // 
+            // checkBoxWarning
+            // 
+            this.checkBoxWarning.AutoSize = true;
+            this.checkBoxWarning.Location = new System.Drawing.Point(259, 16);
+            this.checkBoxWarning.Name = "checkBoxWarning";
+            this.checkBoxWarning.Size = new System.Drawing.Size(144, 17);
+            this.checkBoxWarning.TabIndex = 64;
+            this.checkBoxWarning.Text = "Optional Game Warnings";
+            this.checkBoxWarning.UseVisualStyleBackColor = true;
+            this.checkBoxWarning.CheckedChanged += new System.EventHandler(this.checkBoxWarning_CheckedChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.gameLogTextBox);
+            this.groupBox1.Controls.Add(this.checkBoxWarning);
+            this.groupBox1.Location = new System.Drawing.Point(112, 134);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(446, 242);
+            this.groupBox1.TabIndex = 66;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Scoring";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.picDiceBox1);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.checkBox3);
+            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.picDiceBox5);
+            this.groupBox2.Controls.Add(this.checkBox5);
+            this.groupBox2.Controls.Add(this.picDiceBox4);
+            this.groupBox2.Controls.Add(this.picDiceBox2);
+            this.groupBox2.Controls.Add(this.picDiceBox3);
+            this.groupBox2.Location = new System.Drawing.Point(112, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(446, 115);
+            this.groupBox2.TabIndex = 67;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dice";
+            // 
+            // btnNewGame
+            // 
+            this.btnNewGame.Location = new System.Drawing.Point(6, 181);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(81, 23);
+            this.btnNewGame.TabIndex = 13;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.BtnNewGame_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(6, 210);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(81, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Help";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.BtnHelp_Click);
+            // 
+            // btnRollDice
+            // 
+            this.btnRollDice.Location = new System.Drawing.Point(6, 37);
+            this.btnRollDice.Name = "btnRollDice";
+            this.btnRollDice.Size = new System.Drawing.Size(81, 23);
+            this.btnRollDice.TabIndex = 0;
+            this.btnRollDice.Text = "Roll Dice";
+            this.btnRollDice.UseVisualStyleBackColor = true;
+            this.btnRollDice.Click += new System.EventHandler(this.BtnRollDice_Click);
+            // 
+            // btnNextTurn
+            // 
+            this.btnNextTurn.Location = new System.Drawing.Point(7, 66);
+            this.btnNextTurn.Name = "btnNextTurn";
+            this.btnNextTurn.Size = new System.Drawing.Size(81, 23);
+            this.btnNextTurn.TabIndex = 3;
+            this.btnNextTurn.Text = "Next Turn";
+            this.btnNextTurn.UseVisualStyleBackColor = true;
+            this.btnNextTurn.Click += new System.EventHandler(this.BtnNextTurn_Click);
+            // 
+            // groupBoxButtons
+            // 
+            this.groupBoxButtons.Controls.Add(this.btnNextTurn);
+            this.groupBoxButtons.Controls.Add(this.btnRollDice);
+            this.groupBoxButtons.Controls.Add(this.button5);
+            this.groupBoxButtons.Controls.Add(this.btnNewGame);
+            this.groupBoxButtons.Location = new System.Drawing.Point(12, 134);
+            this.groupBoxButtons.Name = "groupBoxButtons";
+            this.groupBoxButtons.Size = new System.Drawing.Size(94, 242);
+            this.groupBoxButtons.TabIndex = 65;
+            this.groupBoxButtons.TabStop = false;
+            this.groupBoxButtons.Text = "Buttons";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.pictureBoxOnes);
+            this.groupBox3.Controls.Add(this.pictureBoxChance);
+            this.groupBox3.Controls.Add(this.pictureBoxSixes);
+            this.groupBox3.Controls.Add(this.pictureBoxYahtzee);
+            this.groupBox3.Controls.Add(this.pictureBoxTwos);
+            this.groupBox3.Controls.Add(this.pictureBoxThreeKind);
+            this.groupBox3.Controls.Add(this.pictureBoxFourKind);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.pictureBoxThrees);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.pictureBoxFives);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.pictureBoxFullHouse);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.pictureBoxFiveStraight);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.pictureBoxFourStraight);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.pictureBoxFours);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Location = new System.Drawing.Point(564, 87);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(274, 289);
+            this.groupBox3.TabIndex = 68;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "ScoreBoard";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.textRunScore);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.textRunBonus);
+            this.groupBox4.Location = new System.Drawing.Point(565, 13);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(273, 68);
+            this.groupBox4.TabIndex = 69;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Scoring";
+            // 
+            // groupBoxRoll
+            // 
+            this.groupBoxRoll.Controls.Add(this.pictureBoxRolls);
+            this.groupBoxRoll.Location = new System.Drawing.Point(12, 13);
+            this.groupBoxRoll.Name = "groupBoxRoll";
+            this.groupBoxRoll.Size = new System.Drawing.Size(94, 115);
+            this.groupBoxRoll.TabIndex = 70;
+            this.groupBoxRoll.TabStop = false;
+            this.groupBoxRoll.Text = "Roll Number";
+            // 
+            // gUIBindingSource
+            // 
+            this.gUIBindingSource.DataSource = typeof(YahtzeeApplication.GameBoard);
+            // 
+            // GameBoard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(848, 384);
+            this.Controls.Add(this.groupBoxRoll);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxButtons);
+            this.Name = "GameBoard";
+            this.Text = "Yahtzee";
+            this.Load += new System.EventHandler(this.Yahtzee_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSixes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYahtzee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxThreeKind)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFourKind)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFourStraight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFiveStraight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFullHouse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFives)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxThrees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRolls)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTwos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBoxButtons.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBoxRoll.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gUIBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.RichTextBox gameLogTextBox;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.TextBox textRunScore;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textRunBonus;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBoxChance;
+        private System.Windows.Forms.PictureBox pictureBoxSixes;
+        private System.Windows.Forms.PictureBox pictureBoxYahtzee;
+        private System.Windows.Forms.PictureBox pictureBoxThreeKind;
+        private System.Windows.Forms.PictureBox pictureBoxFourKind;
+        private System.Windows.Forms.PictureBox pictureBoxFours;
+        private System.Windows.Forms.PictureBox pictureBoxFourStraight;
+        private System.Windows.Forms.PictureBox pictureBoxFiveStraight;
+        private System.Windows.Forms.PictureBox pictureBoxFullHouse;
+        private System.Windows.Forms.PictureBox pictureBoxFives;
+        private System.Windows.Forms.PictureBox pictureBoxOnes;
+        private System.Windows.Forms.PictureBox pictureBoxThrees;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.BindingSource gUIBindingSource;
+        private System.Windows.Forms.PictureBox picDiceBox1;
+        private System.Windows.Forms.PictureBox picDiceBox2;
+        private System.Windows.Forms.PictureBox picDiceBox3;
+        private System.Windows.Forms.PictureBox picDiceBox4;
+        private System.Windows.Forms.PictureBox picDiceBox5;
+        private System.Windows.Forms.PictureBox pictureBoxRolls;
+        private System.Windows.Forms.PictureBox pictureBoxTwos;
+        private System.Windows.Forms.CheckBox checkBoxWarning;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnRollDice;
+        private System.Windows.Forms.Button btnNextTurn;
+        private System.Windows.Forms.GroupBox groupBoxButtons;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBoxRoll;
+    }
+}
+
