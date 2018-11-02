@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5EA00A32-90A5-4116-9106-90B34ADFA839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YahtzeeApplication", "YahtzeeApplication\YahtzeeApplication.csproj", "{3F8E7CC5-4AE6-4B66-81A4-686C0585D3D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{A9EAF1E9-ABBE-4AD3-96B0-2EB6003460B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{F02B8F3F-85BA-41E4-80CA-2274C01A6CD6}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\Test run 19 All-Tests-ContinuousIntegration_20141115.1 - Test run summary.docx = Docs\Test run 19 All-Tests-ContinuousIntegration_20141115.1 - Test run summary.docx
+		Docs\Use Help - Test run summary.docx = Docs\Use Help - Test run summary.docx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.3.13:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = UnitTestProject\\UnitTestProject.csproj
+		SccProjectName1 = UnitTestProject
+		SccLocalPath1 = UnitTestProject
+		SccProjectUniqueName2 = YahtzeeApplication\\YahtzeeApplication.csproj
+		SccProjectName2 = YahtzeeApplication
+		SccLocalPath2 = YahtzeeApplication
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F8E7CC5-4AE6-4B66-81A4-686C0585D3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8E7CC5-4AE6-4B66-81A4-686C0585D3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8E7CC5-4AE6-4B66-81A4-686C0585D3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8E7CC5-4AE6-4B66-81A4-686C0585D3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9EAF1E9-ABBE-4AD3-96B0-2EB6003460B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9EAF1E9-ABBE-4AD3-96B0-2EB6003460B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9EAF1E9-ABBE-4AD3-96B0-2EB6003460B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9EAF1E9-ABBE-4AD3-96B0-2EB6003460B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
