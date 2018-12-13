@@ -510,9 +510,9 @@
             this.checkBoxWarning.AutoSize = true;
             this.checkBoxWarning.Location = new System.Drawing.Point(259, 16);
             this.checkBoxWarning.Name = "checkBoxWarning";
-            this.checkBoxWarning.Size = new System.Drawing.Size(144, 17);
+            this.checkBoxWarning.Size = new System.Drawing.Size(123, 17);
             this.checkBoxWarning.TabIndex = 64;
-            this.checkBoxWarning.Text = "Optional Game Warnings";
+            this.checkBoxWarning.Text = "Optional Game Hints";
             this.checkBoxWarning.UseVisualStyleBackColor = true;
             this.checkBoxWarning.CheckedChanged += new System.EventHandler(this.checkBoxWarning_CheckedChanged);
             // 
@@ -655,7 +655,7 @@
             this.groupBoxRoll.Size = new System.Drawing.Size(94, 115);
             this.groupBoxRoll.TabIndex = 70;
             this.groupBoxRoll.TabStop = false;
-            this.groupBoxRoll.Text = "Roll Number";
+            this.groupBoxRoll.Text = "Rolls Taken";
             // 
             // gUIBindingSource
             // 

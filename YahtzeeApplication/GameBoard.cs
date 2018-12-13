@@ -154,7 +154,7 @@ namespace YahtzeeApplication
         {
             textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
             textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
-            gameLogTextBox.AppendText("\nYou just scored: " + NewYahtzee.RollScore + " points for your " + ((PictureBox)sender).Tag);
+            gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points for your " + ((PictureBox)sender).Tag + NewYahtzee.DiceArray);
             btnRollDice.Enabled = false;
 
             if (!NewYahtzee.GameStatus)

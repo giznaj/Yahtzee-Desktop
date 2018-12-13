@@ -139,6 +139,22 @@ namespace YahtzeeApplication
             get { return noviceModeMessage; }
             set { noviceModeMessage = value; }
         }
+
+        /// <summary>
+        /// Gets the diceArray object for the caller
+        /// </summary>
+        //public int[] DiceArray
+        //{
+        //    get { return diceArray; }
+        //}
+
+        /// <summary>
+        /// Gets the diceArray object for the caller
+        /// </summary>
+        public string DiceArray
+        {
+            get { return " (" + diceArray[0].ToString() + ", " + diceArray[1].ToString() + ", " + diceArray[2].ToString() + ", " + diceArray[3].ToString() + ", " + diceArray[4].ToString() + ")"; }
+        }
         #endregion
 
         #region Initializers
