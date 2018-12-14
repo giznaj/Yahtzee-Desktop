@@ -211,6 +211,7 @@ namespace YahtzeeApplication
                 NoviceMode = true; // if box is checked in the GUI, set the mode to Novice (Optional warning messages are displayed)
             }
 
+            // Initialize values to 0
             RollNumber = 0;
             RunBonus = 0;
             RunScore = 0;

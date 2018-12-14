@@ -391,6 +391,7 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void BtnNewGame_Click(object sender, EventArgs e)
         {
+            bool newGameWithWarnings = false;
             if (NewYahtzee.GameStatus) // Enter here if there is a game in progress
             {
                 DialogResult dialogResult = MessageBox.Show("Game is not over!  Are you sure?", "Quit Game", MessageBoxButtons.YesNo);
@@ -398,14 +399,15 @@ namespace YahtzeeApplication
                 {
                     if (checkBoxWarning.Checked)
                     {
-                        MessageBox.Show("Clicking a category without the right combination of dice, means you are taking a '0' for that category!" +
-                            "\n\nClicking a category that has already been used ('Checkmark' or 'X') will do nothing!");
+                        MessageBox.Show("Game tips will be displayed to you as you play the game!" +
+                            "\nYou can turn these tips off at any point of the game!");
+                        newGameWithWarnings = true;
                     }
 
                     // Clear the form for the new game (static methods in ultility.cs)
                     Utilities.ResetAllControls(this);
                     // Calls the newGame() method in Yahtzee
-                    NewYahtzee.NewGame(checkBoxWarning.Checked); // Pass the boolean value Yahtzee.  Used for optional warning messages.
+                    NewYahtzee.NewGame(newGameWithWarnings); // Pass the boolean value Yahtzee.  Used for optional warning messages.
                     // Show roll 0 for a new game
                     pictureBoxRolls.Image = rollImageArray[0];
                     // Show the running bonus for the game
@@ -421,14 +423,15 @@ namespace YahtzeeApplication
             {
                 if (checkBoxWarning.Checked) // Enter here if there is no game in progress
                 {
-                    MessageBox.Show("Clicking a category without the right combination of dice, means you are taking a '0' for that category!" +
-                            "\n\nClicking a category that has already been used ('Checkmark' or 'X') will do nothing!");
+                    MessageBox.Show("Game tips will be displayed to you as you play the game!" +
+                            "\nYou can turn these tips off at any point of the game!");
+                    newGameWithWarnings = true;
                 }
 
                 // Clear the form for the new game (static methods in ultility.cs)
                 Utilities.ResetAllControls(this);
                 // Calls the newGame() method in Yahtzee
-                NewYahtzee.NewGame(checkBoxWarning.Checked); // Pass the boolean value Yahtzee.  Used for optional warning messages
+                NewYahtzee.NewGame(newGameWithWarnings); // Pass the boolean value Yahtzee.  Used for optional warning messages
                 // Show roll 0 for a new game
                 pictureBoxRolls.Image = rollImageArray[0];
                 // Show the running bonus for the game
