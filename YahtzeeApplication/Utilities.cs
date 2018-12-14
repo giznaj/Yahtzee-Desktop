@@ -26,11 +26,6 @@ namespace YahtzeeApplication
 
                         if (childControl is CheckBox) // Clears the CheckBox controls
                         {
-                            if (childControl.Name == "checkBoxWarning") // Leave the 'Optional Game Warning' checkbox alone
-                            {
-                                continue;
-                            }
-
                             CheckBox checkBox = (CheckBox)childControl;
                             checkBox.Checked = false;
                         }
@@ -95,6 +90,12 @@ namespace YahtzeeApplication
                 {
                     TextBox textBox = (TextBox)parentControl;
                     textBox.Text = null;
+                }
+
+                if (parentControl is Button) // Enables the Button controls
+                {
+                    Button button = (Button)parentControl;
+                    button.Enabled = true;
                 }
             }
         }

@@ -705,7 +705,7 @@ namespace YahtzeeApplication
         /// depending on what the parameter is, the message will change.
         /// </summary>
         /// <returns></returns>
-        public void SetNoviceModeMessage(int noviceMessageIndex)
+        public void SetNoviceModeMessage(int noviceMessageIndex)    
         {
             if (NoviceMode)
             {

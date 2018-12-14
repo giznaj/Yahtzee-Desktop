@@ -201,6 +201,10 @@ namespace YahtzeeApplication
         /// </summary>
         public void SaveScore()
         {
+            if(NewYahtzee.RollNumber == 0)
+            {
+                
+            }
             switch (selectedIndex)
             {
                 case 0:
@@ -361,12 +365,14 @@ namespace YahtzeeApplication
                     break;
             }
 
-            // Disable the save button of the 'save' was sucessful.  Clicking 'Next Turn' will enable it again
+            // If the 'Save Score' was successful, Disable the 'Save Score' and 'Roll' buttons.  Clicking 'Next Turn' will enable them
             if (NewYahtzee.SaveStatus)
             {
                 this.btnSaveScore.Enabled = false;
+                this.btnRollDice.Enabled = false;
             }
 
+            // If the 'Save Score' was unsuccessful, Enable the 'Roll Dice' button.
             if(!NewYahtzee.SaveStatus)
             {
                 this.btnRollDice.Enabled = true;
@@ -406,6 +412,8 @@ namespace YahtzeeApplication
                     textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
                     // Show the running score for the game
                     textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
+                    // Clear score entering selected category (should be handled in utilities in future - code is there, just not working)
+                    this.textSelectedCategory.Text = null;
                 }
             }
 
@@ -705,13 +713,33 @@ namespace YahtzeeApplication
 
         private void BtnSaveScore_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
+            bool saveScore = false;
+            if(NewYahtzee.RollNumber == 0) // User has not rolled the dice at least 1 time.  User is not allowed to 'Save Score'
             {
                 NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
                 MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
+                saveScore = true;
+            }
+            else if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3 && NewYahtzee.RollNumber > 0) // Enter here if novice mode is enabled.  User should know that they have more rolls left.  User has rolled either 1 or 2 times
+            {
+                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
+                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
+                saveScore = true;
+            }
+            else // User has rolled 3 times.
+            {
+                saveScore = true;
             }
 
-            this.SaveScore();
+            // Call 'SaveScore' method (user is in valid scenario/state (1, 2 or 3 rolls used)
+            if(saveScore)
+            {
+                this.SaveScore();
+            }
+            else
+            {
+                //todo
+            }
         }
         #endregion
     }
