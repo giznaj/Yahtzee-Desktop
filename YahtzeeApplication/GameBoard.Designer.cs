@@ -80,6 +80,10 @@
             this.btnNextTurn = new System.Windows.Forms.Button();
             this.groupBoxButtons = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textSelectedCategory = new System.Windows.Forms.TextBox();
+            this.btnSaveScore = new System.Windows.Forms.Button();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBoxRoll = new System.Windows.Forms.GroupBox();
             this.gUIBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -106,6 +110,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBoxButtons.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBoxRoll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gUIBindingSource)).BeginInit();
@@ -113,10 +118,10 @@
             // 
             // gameLogTextBox
             // 
-            this.gameLogTextBox.Location = new System.Drawing.Point(6, 39);
+            this.gameLogTextBox.Location = new System.Drawing.Point(20, 39);
             this.gameLogTextBox.Name = "gameLogTextBox";
             this.gameLogTextBox.ReadOnly = true;
-            this.gameLogTextBox.Size = new System.Drawing.Size(434, 197);
+            this.gameLogTextBox.Size = new System.Drawing.Size(405, 141);
             this.gameLogTextBox.TabIndex = 5;
             this.gameLogTextBox.Text = "";
             // 
@@ -173,7 +178,7 @@
             // textRunScore
             // 
             this.textRunScore.Enabled = false;
-            this.textRunScore.Location = new System.Drawing.Point(164, 32);
+            this.textRunScore.Location = new System.Drawing.Point(224, 36);
             this.textRunScore.Name = "textRunScore";
             this.textRunScore.Size = new System.Drawing.Size(69, 20);
             this.textRunScore.TabIndex = 19;
@@ -181,7 +186,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 16);
+            this.label1.Location = new System.Drawing.Point(221, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 20;
@@ -190,7 +195,7 @@
             // textRunBonus
             // 
             this.textRunBonus.Enabled = false;
-            this.textRunBonus.Location = new System.Drawing.Point(50, 32);
+            this.textRunBonus.Location = new System.Drawing.Point(123, 36);
             this.textRunBonus.Name = "textRunBonus";
             this.textRunBonus.Size = new System.Drawing.Size(66, 20);
             this.textRunBonus.TabIndex = 21;
@@ -198,7 +203,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 16);
+            this.label2.Location = new System.Drawing.Point(120, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 22;
@@ -207,7 +212,7 @@
             // pictureBoxChance
             // 
             this.pictureBoxChance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxChance.Location = new System.Drawing.Point(138, 210);
+            this.pictureBoxChance.Location = new System.Drawing.Point(150, 240);
             this.pictureBoxChance.Name = "pictureBoxChance";
             this.pictureBoxChance.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxChance.TabIndex = 27;
@@ -217,7 +222,7 @@
             // pictureBoxSixes
             // 
             this.pictureBoxSixes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxSixes.Location = new System.Drawing.Point(36, 209);
+            this.pictureBoxSixes.Location = new System.Drawing.Point(45, 240);
             this.pictureBoxSixes.Name = "pictureBoxSixes";
             this.pictureBoxSixes.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxSixes.TabIndex = 29;
@@ -227,7 +232,7 @@
             // pictureBoxYahtzee
             // 
             this.pictureBoxYahtzee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxYahtzee.Location = new System.Drawing.Point(138, 248);
+            this.pictureBoxYahtzee.Location = new System.Drawing.Point(150, 278);
             this.pictureBoxYahtzee.Name = "pictureBoxYahtzee";
             this.pictureBoxYahtzee.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxYahtzee.TabIndex = 30;
@@ -237,7 +242,7 @@
             // pictureBoxThreeKind
             // 
             this.pictureBoxThreeKind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxThreeKind.Location = new System.Drawing.Point(138, 19);
+            this.pictureBoxThreeKind.Location = new System.Drawing.Point(150, 50);
             this.pictureBoxThreeKind.Name = "pictureBoxThreeKind";
             this.pictureBoxThreeKind.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxThreeKind.TabIndex = 31;
@@ -247,7 +252,7 @@
             // pictureBoxFourKind
             // 
             this.pictureBoxFourKind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFourKind.Location = new System.Drawing.Point(138, 57);
+            this.pictureBoxFourKind.Location = new System.Drawing.Point(150, 88);
             this.pictureBoxFourKind.Name = "pictureBoxFourKind";
             this.pictureBoxFourKind.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFourKind.TabIndex = 32;
@@ -257,7 +262,7 @@
             // pictureBoxFours
             // 
             this.pictureBoxFours.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFours.Location = new System.Drawing.Point(36, 133);
+            this.pictureBoxFours.Location = new System.Drawing.Point(45, 164);
             this.pictureBoxFours.Name = "pictureBoxFours";
             this.pictureBoxFours.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFours.TabIndex = 39;
@@ -267,7 +272,7 @@
             // pictureBoxFourStraight
             // 
             this.pictureBoxFourStraight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFourStraight.Location = new System.Drawing.Point(138, 94);
+            this.pictureBoxFourStraight.Location = new System.Drawing.Point(150, 126);
             this.pictureBoxFourStraight.Name = "pictureBoxFourStraight";
             this.pictureBoxFourStraight.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFourStraight.TabIndex = 38;
@@ -277,7 +282,7 @@
             // pictureBoxFiveStraight
             // 
             this.pictureBoxFiveStraight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFiveStraight.Location = new System.Drawing.Point(138, 132);
+            this.pictureBoxFiveStraight.Location = new System.Drawing.Point(150, 164);
             this.pictureBoxFiveStraight.Name = "pictureBoxFiveStraight";
             this.pictureBoxFiveStraight.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFiveStraight.TabIndex = 37;
@@ -287,7 +292,7 @@
             // pictureBoxFullHouse
             // 
             this.pictureBoxFullHouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFullHouse.Location = new System.Drawing.Point(138, 172);
+            this.pictureBoxFullHouse.Location = new System.Drawing.Point(150, 202);
             this.pictureBoxFullHouse.Name = "pictureBoxFullHouse";
             this.pictureBoxFullHouse.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFullHouse.TabIndex = 36;
@@ -297,7 +302,7 @@
             // pictureBoxFives
             // 
             this.pictureBoxFives.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFives.Location = new System.Drawing.Point(36, 171);
+            this.pictureBoxFives.Location = new System.Drawing.Point(45, 202);
             this.pictureBoxFives.Name = "pictureBoxFives";
             this.pictureBoxFives.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFives.TabIndex = 35;
@@ -307,17 +312,18 @@
             // pictureBoxOnes
             // 
             this.pictureBoxOnes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxOnes.Location = new System.Drawing.Point(36, 19);
+            this.pictureBoxOnes.Location = new System.Drawing.Point(45, 50);
             this.pictureBoxOnes.Name = "pictureBoxOnes";
             this.pictureBoxOnes.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxOnes.TabIndex = 34;
             this.pictureBoxOnes.TabStop = false;
+            this.pictureBoxOnes.Tag = "Ones";
             this.pictureBoxOnes.Click += new System.EventHandler(this.pictureBoxOnes_Click);
             // 
             // pictureBoxThrees
             // 
             this.pictureBoxThrees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxThrees.Location = new System.Drawing.Point(36, 95);
+            this.pictureBoxThrees.Location = new System.Drawing.Point(45, 126);
             this.pictureBoxThrees.Name = "pictureBoxThrees";
             this.pictureBoxThrees.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxThrees.TabIndex = 33;
@@ -327,7 +333,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 19);
+            this.label3.Location = new System.Drawing.Point(81, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 43;
@@ -336,7 +342,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 57);
+            this.label5.Location = new System.Drawing.Point(81, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 44;
@@ -345,7 +351,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(74, 95);
+            this.label6.Location = new System.Drawing.Point(83, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 45;
@@ -354,7 +360,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(74, 132);
+            this.label7.Location = new System.Drawing.Point(83, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 13);
             this.label7.TabIndex = 46;
@@ -363,7 +369,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(74, 170);
+            this.label8.Location = new System.Drawing.Point(81, 202);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 47;
@@ -372,7 +378,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(74, 210);
+            this.label9.Location = new System.Drawing.Point(81, 241);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 13);
             this.label9.TabIndex = 48;
@@ -381,7 +387,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(176, 19);
+            this.label10.Location = new System.Drawing.Point(188, 54);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 13);
             this.label10.TabIndex = 49;
@@ -390,7 +396,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(176, 57);
+            this.label11.Location = new System.Drawing.Point(188, 92);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 50;
@@ -399,7 +405,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(176, 94);
+            this.label12.Location = new System.Drawing.Point(188, 129);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 51;
@@ -408,7 +414,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(176, 132);
+            this.label13.Location = new System.Drawing.Point(188, 167);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 13);
             this.label13.TabIndex = 52;
@@ -417,7 +423,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(176, 172);
+            this.label14.Location = new System.Drawing.Point(188, 207);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(57, 13);
             this.label14.TabIndex = 53;
@@ -426,7 +432,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(176, 210);
+            this.label15.Location = new System.Drawing.Point(188, 245);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 13);
             this.label15.TabIndex = 54;
@@ -435,7 +441,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(176, 248);
+            this.label16.Location = new System.Drawing.Point(188, 283);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 13);
             this.label16.TabIndex = 55;
@@ -498,7 +504,7 @@
             // pictureBoxTwos
             // 
             this.pictureBoxTwos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxTwos.Location = new System.Drawing.Point(36, 57);
+            this.pictureBoxTwos.Location = new System.Drawing.Point(45, 88);
             this.pictureBoxTwos.Name = "pictureBoxTwos";
             this.pictureBoxTwos.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxTwos.TabIndex = 62;
@@ -522,10 +528,10 @@
             this.groupBox1.Controls.Add(this.checkBoxWarning);
             this.groupBox1.Location = new System.Drawing.Point(112, 134);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(446, 242);
+            this.groupBox1.Size = new System.Drawing.Size(446, 194);
             this.groupBox1.TabIndex = 66;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Scoring";
+            this.groupBox1.Text = "Scoring Log";
             // 
             // groupBox2
             // 
@@ -548,7 +554,7 @@
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(6, 181);
+            this.btnNewGame.Location = new System.Drawing.Point(6, 220);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(81, 23);
             this.btnNewGame.TabIndex = 13;
@@ -558,7 +564,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(6, 210);
+            this.button5.Location = new System.Drawing.Point(6, 249);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(81, 23);
             this.button5.TabIndex = 4;
@@ -570,7 +576,7 @@
             // 
             this.btnRollDice.Location = new System.Drawing.Point(6, 37);
             this.btnRollDice.Name = "btnRollDice";
-            this.btnRollDice.Size = new System.Drawing.Size(81, 23);
+            this.btnRollDice.Size = new System.Drawing.Size(82, 23);
             this.btnRollDice.TabIndex = 0;
             this.btnRollDice.Text = "Roll Dice";
             this.btnRollDice.UseVisualStyleBackColor = true;
@@ -594,13 +600,14 @@
             this.groupBoxButtons.Controls.Add(this.btnNewGame);
             this.groupBoxButtons.Location = new System.Drawing.Point(12, 134);
             this.groupBoxButtons.Name = "groupBoxButtons";
-            this.groupBoxButtons.Size = new System.Drawing.Size(94, 242);
+            this.groupBoxButtons.Size = new System.Drawing.Size(94, 280);
             this.groupBoxButtons.TabIndex = 65;
             this.groupBoxButtons.TabStop = false;
             this.groupBoxButtons.Text = "Buttons";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.pictureBoxOnes);
             this.groupBox3.Controls.Add(this.pictureBoxChance);
             this.groupBox3.Controls.Add(this.pictureBoxSixes);
@@ -627,12 +634,51 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(564, 87);
+            this.groupBox3.Location = new System.Drawing.Point(564, 13);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(274, 289);
+            this.groupBox3.Size = new System.Drawing.Size(297, 401);
             this.groupBox3.TabIndex = 68;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ScoreBoard";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textSelectedCategory);
+            this.groupBox5.Controls.Add(this.btnSaveScore);
+            this.groupBox5.Controls.Add(this.checkBox6);
+            this.groupBox5.Location = new System.Drawing.Point(6, 337);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(285, 56);
+            this.groupBox5.TabIndex = 66;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Score Entering";
+            // 
+            // textSelectedCategory
+            // 
+            this.textSelectedCategory.Location = new System.Drawing.Point(93, 23);
+            this.textSelectedCategory.Name = "textSelectedCategory";
+            this.textSelectedCategory.Size = new System.Drawing.Size(69, 20);
+            this.textSelectedCategory.TabIndex = 64;
+            // 
+            // btnSaveScore
+            // 
+            this.btnSaveScore.Location = new System.Drawing.Point(177, 20);
+            this.btnSaveScore.Name = "btnSaveScore";
+            this.btnSaveScore.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveScore.TabIndex = 65;
+            this.btnSaveScore.Text = "Save Score";
+            this.btnSaveScore.UseVisualStyleBackColor = true;
+            this.btnSaveScore.Click += new System.EventHandler(this.BtnSaveScore_Click);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(11, 26);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(76, 17);
+            this.checkBox6.TabIndex = 63;
+            this.checkBox6.Text = "Take Zero";
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -640,12 +686,12 @@
             this.groupBox4.Controls.Add(this.textRunScore);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.textRunBonus);
-            this.groupBox4.Location = new System.Drawing.Point(565, 13);
+            this.groupBox4.Location = new System.Drawing.Point(112, 334);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(273, 68);
+            this.groupBox4.Size = new System.Drawing.Size(446, 80);
             this.groupBox4.TabIndex = 69;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Scoring";
+            this.groupBox4.Text = "Scoring Totals";
             // 
             // groupBoxRoll
             // 
@@ -666,7 +712,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(848, 384);
+            this.ClientSize = new System.Drawing.Size(874, 426);
             this.Controls.Add(this.groupBoxRoll);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -702,6 +748,8 @@
             this.groupBoxButtons.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBoxRoll.ResumeLayout(false);
@@ -766,6 +814,10 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBoxRoll;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.Button btnSaveScore;
+        private System.Windows.Forms.TextBox textSelectedCategory;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }
 

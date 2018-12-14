@@ -2,13 +2,7 @@
 //
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
@@ -17,6 +11,7 @@ namespace YahtzeeApplication
     public partial class GameBoard : Form
     {
         #region Private Members
+        int selectedIndex; // Stores the selected category the user is either taking a 0 for, or getting a score for
         bool[] rollOrHoldArray = new bool[5]; // Stores the bool value for each dice for when rolling.  (hold = false, true = roll)
         CheckBox[] checkBoxArray = new CheckBox[5]; // Array of checkboxes
         PictureBox[] pictureBoxArray = new PictureBox[5]; // Array of picture boxes for the dice
@@ -29,7 +24,8 @@ namespace YahtzeeApplication
         HelpScreen newHelper; // Declare new HelpScreen.cs object (help screen) 
         bool newGameMessage; // User enables or disables the warning message when a new game starts
         bool saveStatus; // true if the user has selected a category for the current round of rolls
-
+        string noScoreSaved = "You don't have the dice combination for this category." + "\n" +
+                            "Did you mean to take a Zero for this category?";
         #endregion
 
         #region Public Properties
@@ -50,7 +46,6 @@ namespace YahtzeeApplication
             get { return saveStatus; }
             set { saveStatus = value; }
         }
-
         #endregion
 
         #region Initializers
@@ -150,12 +145,12 @@ namespace YahtzeeApplication
         /// <summary>
         /// Method displays scores and information to the gameboard.
         /// </summary>
-        private void DisplayScores(object sender)
+        private void DisplayScores()
         {
             textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
             textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
-            gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points for your " + ((PictureBox)sender).Tag + NewYahtzee.DiceArray);
-            btnRollDice.Enabled = false;
+            gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points: " + NewYahtzee.DiceArray);
+            //btnRollDice.Enabled = false;
 
             if (!NewYahtzee.GameStatus)
             {
@@ -191,6 +186,194 @@ namespace YahtzeeApplication
             {
                 categoryArray[disableCounter].Enabled = false;
             }
+        }
+
+        /// <summary>
+        /// displayes the selected category in the textbox on GUI
+        /// </summary>
+        public void DisplaySelectedCategory(string selectedCategory)
+        {
+            this.textSelectedCategory.Text = selectedCategory;
+        }
+
+        /// <summary>
+        /// displayes the selected category in the textbox on GUI
+        /// </summary>
+        public void SaveScore()
+        {
+            switch (selectedIndex)
+            {
+                case 0:
+                    if (NewYahtzee.SaveOnes())
+                    {
+                        pictureBoxOnes.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 1:
+                    if (NewYahtzee.SaveTwos())
+                    {
+                        pictureBoxTwos.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 2:
+                    if (NewYahtzee.SaveThrees())
+                    {
+                        pictureBoxThrees.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 3:
+                    if (NewYahtzee.SaveFours())
+                    {
+                        pictureBoxFours.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 4:
+                    if (NewYahtzee.SaveFives())
+                    {
+                        pictureBoxFives.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 5:
+                    if (NewYahtzee.SaveSixes())
+                    {
+                        pictureBoxSixes.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 6:
+                    if (NewYahtzee.SaveThreeKind())
+                    {
+                        pictureBoxThreeKind.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 7:
+                    if (NewYahtzee.SaveFourKind())
+                    {
+                        pictureBoxFourKind.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 8:
+                    if (NewYahtzee.SaveFourKind())
+                    {
+                        pictureBoxFourKind.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 9:
+                    if (NewYahtzee.SaveFourStraight())
+                    {
+                        pictureBoxFourStraight.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 10:
+                    if (NewYahtzee.SaveFiveStraight())
+                    {
+                        pictureBoxFiveStraight.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 11:
+                    if (NewYahtzee.SaveFullHouse())
+                    {
+                        pictureBoxFullHouse.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 12:
+                    if (NewYahtzee.SaveChance())
+                    {
+                        pictureBoxChance.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                case 13:
+                    if (NewYahtzee.SaveYahtzee())
+                    {
+                        pictureBoxYahtzee.Image = categoryImageArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show(noScoreSaved);
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+
+            // Disable the save button of the 'save' was sucessful.  Clicking 'Next Turn' will enable it again
+            if (NewYahtzee.SaveStatus)
+            {
+                this.btnSaveScore.Enabled = false;
+            }
+
+            if(!NewYahtzee.SaveStatus)
+            {
+                this.btnRollDice.Enabled = true;
+            }
+
+            // Call the DisplayScores method
+            this.DisplayScores();
         }
         #endregion
 
@@ -320,7 +503,7 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void BtnNextTurn_Click(object sender, EventArgs e)
         {
-            if (SaveStatus)
+            if (NewYahtzee.SaveStatus)
             {
                 // Set rolls back to 0
                 NewYahtzee.RollNumber = 0;
@@ -328,8 +511,10 @@ namespace YahtzeeApplication
                 NewYahtzee.RollScore = 0;
                 // Display the 0 in the roll box.  Roll number box shows the number of rolls used
                 pictureBoxRolls.Image = rollImageArray[0];
-                // Enable the roll button again
+                // Enable the 'roll' button again
                 this.btnRollDice.Enabled = true;
+                // Enable the 'save' button again
+                this.btnSaveScore.Enabled = true;
 
                 // Uncheck all of the checkboxes for the next turn
                 for (int uncheckCounter = 0; uncheckCounter < checkBoxArray.Length; ++uncheckCounter)
@@ -346,12 +531,14 @@ namespace YahtzeeApplication
                     }
                 }
 
-                SaveStatus = false; // Set back to false so validation will work for the next roll
+                // Set back to false so validation will work for the next roll
+                NewYahtzee.SaveStatus = false; 
             }
 
             else
             {
-                MessageBox.Show("You haven't saved a category for this round yet!");
+                MessageBox.Show("You haven't saved a category for this round yet!" + "\n" +
+                    "Save your points or take a 'Zero' for a caegory first!");
             }
         }
 
@@ -362,24 +549,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxOnes_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveOnes())
-            {
-                pictureBoxOnes.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxOnes.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores(sender);
+            DisplaySelectedCategory("Ones");
+            selectedIndex = 0;
         }
 
         /// <summary>
@@ -389,24 +560,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxTwos_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveTwos())
-            {
-                pictureBoxTwos.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxTwos.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores(sender);
+            DisplaySelectedCategory("Twos");
+            selectedIndex = 1;
         }
 
         /// <summary>
@@ -416,24 +571,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxThrees_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveThrees())
-            {
-                pictureBoxThrees.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxThrees.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores(sender); 
+            DisplaySelectedCategory("Threes");
+            selectedIndex = 2; 
         }
 
         /// <summary>
@@ -443,24 +582,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFours_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveFours())
-            {
-                pictureBoxFours.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxFours.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores(sender);
+            DisplaySelectedCategory("Fours");
+            selectedIndex = 3;
         }
 
         /// <summary>
@@ -470,24 +593,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFives_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveFives())
-            {
-                pictureBoxFives.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxFives.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores(sender);
+            DisplaySelectedCategory("Fives");
+            selectedIndex = 4;
         }
 
         /// <summary>
@@ -497,24 +604,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxSixes_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveSixes())
-            {
-                pictureBoxSixes.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxSixes.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores(sender);
+            DisplaySelectedCategory("Sixes");
+            selectedIndex = 5;
         }
 
         /// <summary>
@@ -524,24 +615,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxThreeKind_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveThreeKind())
-            {
-                pictureBoxThreeKind.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxThreeKind.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores(sender);
+            DisplaySelectedCategory("3 of a kind");
+            selectedIndex = 6;
         }
 
         /// <summary>
@@ -568,7 +643,7 @@ namespace YahtzeeApplication
                 pictureBoxFourKind.Image = categoryImageArray[1];
             }
 
-            this.DisplayScores(sender);
+            this.DisplayScores();
         }
 
         /// <summary>
@@ -595,7 +670,7 @@ namespace YahtzeeApplication
                 pictureBoxFourStraight.Image = categoryImageArray[1];
             }
 
-            this.DisplayScores(sender);
+            this.DisplayScores();
         }
 
         /// <summary>
@@ -622,7 +697,7 @@ namespace YahtzeeApplication
                 pictureBoxFiveStraight.Image = categoryImageArray[1];
             }
 
-            this.DisplayScores(sender);
+            this.DisplayScores();
         }
 
         /// <summary>
@@ -649,7 +724,7 @@ namespace YahtzeeApplication
                 pictureBoxFullHouse.Image = categoryImageArray[1];
             }
 
-            this.DisplayScores(sender);
+            //this.DisplayScores();
         }
 
         /// <summary>
@@ -676,7 +751,7 @@ namespace YahtzeeApplication
                 pictureBoxChance.Image = categoryImageArray[1];
             }
 
-            this.DisplayScores(sender);
+            this.DisplayScores();
         }
 
         /// <summary>
@@ -703,7 +778,7 @@ namespace YahtzeeApplication
                 pictureBoxYahtzee.Image = categoryImageArray[1];
             }
 
-            this.DisplayScores(sender);
+            this.DisplayScores();
         }
 
         /// <summary>
@@ -722,6 +797,17 @@ namespace YahtzeeApplication
             {
                 NewYahtzee.NoviceMode = false;
             }
+        }
+
+        private void BtnSaveScore_Click(object sender, EventArgs e)
+        {
+            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
+            {
+                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
+                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
+            }
+
+            this.SaveScore();
         }
         #endregion
     }

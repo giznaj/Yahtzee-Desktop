@@ -35,6 +35,7 @@ namespace YahtzeeApplication
         private bool bonusStatus; // True if the user gets the 35 point bonus for the upper section
         private bool noviceMode; // True to display the optional game warnings (novice users)
         private string noviceModeMessage; // Stores the value of text to be displayed for optional warning messages
+        private bool saveStatus = false; //status of the round scoring
         #endregion
 
         #region Public Properties
@@ -141,12 +142,13 @@ namespace YahtzeeApplication
         }
 
         /// <summary>
-        /// Gets the diceArray object for the caller
+        /// Sets and gets the boolean value for the save status for the round score
         /// </summary>
-        //public int[] DiceArray
-        //{
-        //    get { return diceArray; }
-        //}
+        public bool SaveStatus
+        {
+            get { return saveStatus; }
+            set { saveStatus = value; }
+        }
 
         /// <summary>
         /// Gets the diceArray object for the caller
@@ -294,7 +296,6 @@ namespace YahtzeeApplication
         /// </summary>
         public bool SaveOnes()
         {
-            bool saveStatus = false; // Set save status to false initially.  If we find a 1, change the bool value to true
             for (int diceCounter = 0; diceCounter < diceArray.Length; ++diceCounter)
             {
                 if (diceArray[diceCounter] == 1)
@@ -313,7 +314,6 @@ namespace YahtzeeApplication
         /// </summary>
         public bool SaveTwos()
         {
-            bool saveStatus = false; // Set save status to false initially.  If we find a 2, change the bool value to true
             for (int diceCounter = 0; diceCounter < diceArray.Length; ++diceCounter)
             {
                 if (diceArray[diceCounter] == 2)
@@ -333,7 +333,6 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveThrees()
         {
-            bool saveStatus = false; // Set save status to false initially.  If we find a 3, change the bool value to true
             for (int diceCounter = 0; diceCounter < diceArray.Length; ++diceCounter)
             {
                 if (diceArray[diceCounter] == 3)

@@ -46,6 +46,12 @@ namespace YahtzeeApplication
                             RichTextBox richText = (RichTextBox)childControl;
                             richText.Text = null;
                         }
+
+                        if (childControl is TextBox)
+                        {
+                            TextBox textBox = (TextBox)childControl;
+                            textBox.Text = null;
+                        }
                     }
                 }
 
@@ -76,6 +82,13 @@ namespace YahtzeeApplication
                 {
                     ListBox listBox = (ListBox)parentControl;
                     listBox.ClearSelected();
+                }
+
+                // Called when a new game is started.  Clears the text in all textbox controls
+                if (parentControl is TextBox)
+                {
+                    TextBox textBox = (TextBox)parentControl;
+                    textBox.Text = null;
                 }
             }
         }
