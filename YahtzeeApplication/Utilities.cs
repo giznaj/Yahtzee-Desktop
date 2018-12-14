@@ -17,11 +17,11 @@ namespace YahtzeeApplication
                 {
                     foreach (Control childControl in parentControl.Controls)
                     {
-                        if (childControl is PictureBox) // Clears the PictureBox controls
+                        if (childControl is PictureBox) // Clears the PictureBox controls and enables them to be clicked
                         {
                             PictureBox pictureBox = (PictureBox)childControl;
                             pictureBox.Image = null;
-                            pictureBox.Enabled = true; // Enable the boxes to be clicked by the user again
+                            pictureBox.Enabled = true;
                         }
 
                         if (childControl is CheckBox) // Clears the CheckBox controls
@@ -38,21 +38,27 @@ namespace YahtzeeApplication
                         if (childControl is Button) // Enables the Button controls
                         {
                             Button button = (Button)childControl;
-                            button.Enabled = true; // Enable the button to be clicked by the user again
+                            button.Enabled = true;
                         }
 
-                        if (childControl is RichTextBox)
+                        if (childControl is RichTextBox) // Clear the Rich TextBox controls
                         {
                             RichTextBox richText = (RichTextBox)childControl;
                             richText.Text = null;
                         }
 
-                        if (childControl is TextBox)
+                        if (childControl is TextBox) // Clear the TextBox controls
                         {
                             TextBox textBox = (TextBox)childControl;
                             textBox.Text = null;
                         }
                     }
+                }
+
+                if (parentControl is Button) // Enables the Button controls
+                {
+                    Button button = (Button)parentControl;
+                    button.Enabled = true;
                 }
 
                 // Called when a new game is started.  enables all groupbox controls

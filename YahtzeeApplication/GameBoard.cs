@@ -626,24 +626,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFourKind_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveFourKind())
-            {
-                pictureBoxFourKind.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxFourKind.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores();
+            DisplaySelectedCategory("4 of a kind");
+            selectedIndex = 7;
         }
 
         /// <summary>
@@ -653,24 +637,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFourStraight_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveFourStraight())
-            {
-                pictureBoxFourStraight.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxFourStraight.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores();
+            DisplaySelectedCategory("4 card straight");
+            selectedIndex = 8;
         }
 
         /// <summary>
@@ -680,24 +648,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFiveStraight_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveFiveStraight())
-            {
-                pictureBoxFiveStraight.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxFiveStraight.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores();
+            DisplaySelectedCategory("5 card straight");
+            selectedIndex = 9;
         }
 
         /// <summary>
@@ -707,24 +659,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFullHouse_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveFullHouse())
-            {
-                pictureBoxFullHouse.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxFullHouse.Image = categoryImageArray[1];
-            }
-
-            //this.DisplayScores();
+            DisplaySelectedCategory("full house");
+            selectedIndex = 10;
         }
 
         /// <summary>
@@ -734,24 +670,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxChance_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveChance())
-            {
-                pictureBoxChance.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxChance.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores();
+            DisplaySelectedCategory("chance");
+            selectedIndex = 11;
         }
 
         /// <summary>
@@ -761,24 +681,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxYahtzee_Click(object sender, EventArgs e)
         {
-            if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3) // Enter here if novice mode is enabled
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
-            }
-
-            SaveStatus = true;
-            DisableAllCategory();
-            if (NewYahtzee.SaveYahtzee())
-            {
-                pictureBoxYahtzee.Image = categoryImageArray[0];
-            }
-            else
-            {
-                pictureBoxYahtzee.Image = categoryImageArray[1];
-            }
-
-            this.DisplayScores();
+            DisplaySelectedCategory("yahtzee");
+            selectedIndex = 12;
         }
 
         /// <summary>
