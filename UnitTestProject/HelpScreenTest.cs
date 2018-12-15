@@ -10,6 +10,7 @@ namespace UnitTestProject
     [TestFixture]
     public class HelpScreenTest
     {
+        #region Setup TearDown
         //Use to run code before each test
         [SetUp]
         public void MyTestSetup()
@@ -23,7 +24,9 @@ namespace UnitTestProject
         {
             //todo
         }
+        #endregion
 
+        #region Tests
         /// <summary>
         ///A test for form elments
         ///</summary>
@@ -57,5 +60,6 @@ namespace UnitTestProject
             //Assert
             //Assert.IsTrue(target.IsDisposed);
         }
+        #endregion
     }
 }

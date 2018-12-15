@@ -121,7 +121,7 @@ namespace YahtzeeApplication
             pictureBoxArray[4] = picDiceBox5;
 
             // Array of dice images themselves that populate the PictureBox array
-            diceImageArray[0] = Image.FromFile("1.dice.GIF");
+            diceImageArray[0] = Image.FromFile("..\\..\\..\\Resources\\1.dice.gif");
             diceImageArray[1] = Image.FromFile("2.dice.GIF");
             diceImageArray[2] = Image.FromFile("3.dice.GIF");
             diceImageArray[3] = Image.FromFile("4.dice.GIF");

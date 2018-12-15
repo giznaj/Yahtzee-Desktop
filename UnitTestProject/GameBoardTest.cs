@@ -3,8 +3,6 @@ using NUnit.Framework;
 
 namespace UnitTestProject
 {
-    
-    
     /// <summary>
     ///This is a test class for GameBoardTest and is intended
     ///to contain all GameBoardTest Unit Tests
@@ -12,78 +10,48 @@ namespace UnitTestProject
     [TestFixture]
     public class GameBoardTest
     {
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
+        #region Setup TearDown
+        //Use to run code before each test
+        [SetUp]
+        public void MyTestSetup()
         {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
+            //todo
         }
 
-        #region Additional test attributes
-        // 
-        //You can use the following additional attributes as you write your tests:
-        //
-        //Use ClassInitialize to run code before running the first test in the class
-        //[ClassInitialize()]
-        //public static void MyClassInitialize(TestContext testContext)
-        //{
-        //}
-        //
-        //Use ClassCleanup to run code after all tests in a class have run
-        //[ClassCleanup()]
-        //public static void MyClassCleanup()
-        //{
-        //}
-        //
-        //Use TestInitialize to run code before running each test
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{
-        //}
-        //
         //Use TestCleanup to run code after each test has run
-        //[TestCleanup()]
-        //public void MyTestCleanup()
-        //{
-        //}
-        //
+        [TearDown]
+        public void MyTestCleanup()
+        {
+            //todo
+        }
         #endregion
 
-
+        #region Tests
         /// <summary>
-        ///A test for GameBoard Constructor
+        ///A test for form elments
         ///</summary>
-        [TestCase, Order(1)]
-        public void GameBoardConstructorTest()
+        [Test]
+        public void GameBoardElements()
         {
+            //Arrange
             GameBoard target = new GameBoard();
-            Assert.Inconclusive("TODO: Implement code to verify target");
+
+            //Act
+
+            //Assert
+            Assert.IsTrue(target.Text.Equals("Yahtzee"));
         }
 
         /// <summary>
-        ///A test for NewGameMessage
+        ///A test for form actions
         ///</summary>
-        [TestCase()]
-        public void NewGameMessageTest()
-        {
-            GameBoard target = new GameBoard(); // TODO: Initialize to an appropriate value
-            bool expected = false; // TODO: Initialize to an appropriate value
-            bool actual;
-            target.NewGameMessage = expected;
-            actual = target.NewGameMessage;
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+        //[Test]
+        //public void NewGameTest()
+        //{
+        //    GameBoard target = new GameBoard(); // TODO: Initialize to an appropriate value
+
+        //    Assert.Inconclusive("Verify the correctness of this test method.");
+        //}
+        #endregion
     }
 }
