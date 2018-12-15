@@ -337,17 +337,6 @@ namespace YahtzeeApplication
                         break;
 
                     case 8:
-                        if (NewYahtzee.SaveFourKind())
-                        {
-                            pictureBoxFourKind.Image = categoryImageArray[0];
-                        }
-                        else
-                        {
-                            MessageBox.Show(noScoreSaved);
-                        }
-                        break;
-
-                    case 9:
                         if (NewYahtzee.SaveFourStraight())
                         {
                             pictureBoxFourStraight.Image = categoryImageArray[0];
@@ -358,7 +347,7 @@ namespace YahtzeeApplication
                         }
                         break;
 
-                    case 10:
+                    case 9:
                         if (NewYahtzee.SaveFiveStraight())
                         {
                             pictureBoxFiveStraight.Image = categoryImageArray[0];
@@ -369,7 +358,7 @@ namespace YahtzeeApplication
                         }
                         break;
 
-                    case 11:
+                    case 10:
                         if (NewYahtzee.SaveFullHouse())
                         {
                             pictureBoxFullHouse.Image = categoryImageArray[0];
@@ -380,7 +369,7 @@ namespace YahtzeeApplication
                         }
                         break;
 
-                    case 12:
+                    case 11:
                         if (NewYahtzee.SaveChance())
                         {
                             pictureBoxChance.Image = categoryImageArray[0];
@@ -391,7 +380,7 @@ namespace YahtzeeApplication
                         }
                         break;
 
-                    case 13:
+                    case 12:
                         if (NewYahtzee.SaveYahtzee())
                         {
                             pictureBoxYahtzee.Image = categoryImageArray[0];
@@ -623,7 +612,7 @@ namespace YahtzeeApplication
         private void pictureBoxOnes_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("Ones");
-            selectedIndex = 0;
+            SelectedIndex = 0;
         }
 
         /// <summary>
@@ -634,7 +623,7 @@ namespace YahtzeeApplication
         private void pictureBoxTwos_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("Twos");
-            selectedIndex = 1;
+            SelectedIndex = 1;
         }
 
         /// <summary>
@@ -645,7 +634,7 @@ namespace YahtzeeApplication
         private void pictureBoxThrees_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("Threes");
-            selectedIndex = 2; 
+            SelectedIndex = 2; 
         }
 
         /// <summary>
@@ -656,7 +645,7 @@ namespace YahtzeeApplication
         private void pictureBoxFours_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("Fours");
-            selectedIndex = 3;
+            SelectedIndex = 3;
         }
 
         /// <summary>
@@ -667,7 +656,7 @@ namespace YahtzeeApplication
         private void pictureBoxFives_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("Fives");
-            selectedIndex = 4;
+            SelectedIndex = 4;
         }
 
         /// <summary>
@@ -678,7 +667,7 @@ namespace YahtzeeApplication
         private void pictureBoxSixes_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("Sixes");
-            selectedIndex = 5;
+            SelectedIndex = 5;
         }
 
         /// <summary>
@@ -689,7 +678,7 @@ namespace YahtzeeApplication
         private void pictureBoxThreeKind_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("3 of a kind");
-            selectedIndex = 6;
+            SelectedIndex = 6;
         }
 
         /// <summary>
@@ -700,7 +689,7 @@ namespace YahtzeeApplication
         private void pictureBoxFourKind_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("4 of a kind");
-            selectedIndex = 7;
+            SelectedIndex = 7;
         }
 
         /// <summary>
@@ -711,7 +700,7 @@ namespace YahtzeeApplication
         private void pictureBoxFourStraight_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("4 card straight");
-            selectedIndex = 8;
+            SelectedIndex = 8;
         }
 
         /// <summary>
@@ -722,7 +711,7 @@ namespace YahtzeeApplication
         private void pictureBoxFiveStraight_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("5 card straight");
-            selectedIndex = 9;
+            SelectedIndex = 9;
         }
 
         /// <summary>
@@ -733,7 +722,7 @@ namespace YahtzeeApplication
         private void pictureBoxFullHouse_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("full house");
-            selectedIndex = 10;
+            SelectedIndex = 10;
         }
 
         /// <summary>
@@ -744,7 +733,7 @@ namespace YahtzeeApplication
         private void pictureBoxChance_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("chance");
-            selectedIndex = 11;
+            SelectedIndex = 11;
         }
 
         /// <summary>
@@ -755,7 +744,7 @@ namespace YahtzeeApplication
         private void pictureBoxYahtzee_Click(object sender, EventArgs e)
         {
             DisplaySelectedCategory("yahtzee");
-            selectedIndex = 12;
+            SelectedIndex = 12;
         }
         #endregion
     }

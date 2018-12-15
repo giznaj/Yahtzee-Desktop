@@ -590,7 +590,7 @@
             this.groupBoxButtons.Size = new System.Drawing.Size(94, 280);
             this.groupBoxButtons.TabIndex = 65;
             this.groupBoxButtons.TabStop = false;
-            this.groupBoxButtons.Text = "Buttons";
+            this.groupBoxButtons.Text = "Actions";
             // 
             // groupBox3
             // 
