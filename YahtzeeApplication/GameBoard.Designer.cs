@@ -212,7 +212,7 @@
             // pictureBoxChance
             // 
             this.pictureBoxChance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxChance.Location = new System.Drawing.Point(150, 240);
+            this.pictureBoxChance.Location = new System.Drawing.Point(151, 217);
             this.pictureBoxChance.Name = "pictureBoxChance";
             this.pictureBoxChance.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxChance.TabIndex = 27;
@@ -222,7 +222,7 @@
             // pictureBoxSixes
             // 
             this.pictureBoxSixes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxSixes.Location = new System.Drawing.Point(45, 240);
+            this.pictureBoxSixes.Location = new System.Drawing.Point(46, 217);
             this.pictureBoxSixes.Name = "pictureBoxSixes";
             this.pictureBoxSixes.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxSixes.TabIndex = 29;
@@ -232,7 +232,7 @@
             // pictureBoxYahtzee
             // 
             this.pictureBoxYahtzee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxYahtzee.Location = new System.Drawing.Point(150, 278);
+            this.pictureBoxYahtzee.Location = new System.Drawing.Point(151, 255);
             this.pictureBoxYahtzee.Name = "pictureBoxYahtzee";
             this.pictureBoxYahtzee.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxYahtzee.TabIndex = 30;
@@ -242,7 +242,7 @@
             // pictureBoxThreeKind
             // 
             this.pictureBoxThreeKind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxThreeKind.Location = new System.Drawing.Point(150, 50);
+            this.pictureBoxThreeKind.Location = new System.Drawing.Point(151, 27);
             this.pictureBoxThreeKind.Name = "pictureBoxThreeKind";
             this.pictureBoxThreeKind.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxThreeKind.TabIndex = 31;
@@ -252,7 +252,7 @@
             // pictureBoxFourKind
             // 
             this.pictureBoxFourKind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFourKind.Location = new System.Drawing.Point(150, 88);
+            this.pictureBoxFourKind.Location = new System.Drawing.Point(151, 65);
             this.pictureBoxFourKind.Name = "pictureBoxFourKind";
             this.pictureBoxFourKind.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFourKind.TabIndex = 32;
@@ -262,7 +262,7 @@
             // pictureBoxFours
             // 
             this.pictureBoxFours.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFours.Location = new System.Drawing.Point(45, 164);
+            this.pictureBoxFours.Location = new System.Drawing.Point(46, 141);
             this.pictureBoxFours.Name = "pictureBoxFours";
             this.pictureBoxFours.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFours.TabIndex = 39;
@@ -272,7 +272,7 @@
             // pictureBoxFourStraight
             // 
             this.pictureBoxFourStraight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFourStraight.Location = new System.Drawing.Point(150, 126);
+            this.pictureBoxFourStraight.Location = new System.Drawing.Point(151, 103);
             this.pictureBoxFourStraight.Name = "pictureBoxFourStraight";
             this.pictureBoxFourStraight.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFourStraight.TabIndex = 38;
@@ -282,7 +282,7 @@
             // pictureBoxFiveStraight
             // 
             this.pictureBoxFiveStraight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFiveStraight.Location = new System.Drawing.Point(150, 164);
+            this.pictureBoxFiveStraight.Location = new System.Drawing.Point(151, 141);
             this.pictureBoxFiveStraight.Name = "pictureBoxFiveStraight";
             this.pictureBoxFiveStraight.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFiveStraight.TabIndex = 37;
@@ -292,7 +292,7 @@
             // pictureBoxFullHouse
             // 
             this.pictureBoxFullHouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFullHouse.Location = new System.Drawing.Point(150, 202);
+            this.pictureBoxFullHouse.Location = new System.Drawing.Point(151, 179);
             this.pictureBoxFullHouse.Name = "pictureBoxFullHouse";
             this.pictureBoxFullHouse.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFullHouse.TabIndex = 36;
@@ -302,7 +302,7 @@
             // pictureBoxFives
             // 
             this.pictureBoxFives.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFives.Location = new System.Drawing.Point(45, 202);
+            this.pictureBoxFives.Location = new System.Drawing.Point(46, 179);
             this.pictureBoxFives.Name = "pictureBoxFives";
             this.pictureBoxFives.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxFives.TabIndex = 35;
@@ -312,7 +312,7 @@
             // pictureBoxOnes
             // 
             this.pictureBoxOnes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxOnes.Location = new System.Drawing.Point(45, 50);
+            this.pictureBoxOnes.Location = new System.Drawing.Point(46, 27);
             this.pictureBoxOnes.Name = "pictureBoxOnes";
             this.pictureBoxOnes.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxOnes.TabIndex = 34;
@@ -323,7 +323,7 @@
             // pictureBoxThrees
             // 
             this.pictureBoxThrees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxThrees.Location = new System.Drawing.Point(45, 126);
+            this.pictureBoxThrees.Location = new System.Drawing.Point(46, 103);
             this.pictureBoxThrees.Name = "pictureBoxThrees";
             this.pictureBoxThrees.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxThrees.TabIndex = 33;
@@ -333,7 +333,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 50);
+            this.label3.Location = new System.Drawing.Point(82, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 43;
@@ -342,7 +342,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(81, 88);
+            this.label5.Location = new System.Drawing.Point(82, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 44;
@@ -351,7 +351,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(83, 126);
+            this.label6.Location = new System.Drawing.Point(84, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 45;
@@ -360,7 +360,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(83, 163);
+            this.label7.Location = new System.Drawing.Point(84, 140);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 13);
             this.label7.TabIndex = 46;
@@ -369,7 +369,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(81, 202);
+            this.label8.Location = new System.Drawing.Point(82, 179);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 47;
@@ -378,7 +378,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(81, 241);
+            this.label9.Location = new System.Drawing.Point(82, 218);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 13);
             this.label9.TabIndex = 48;
@@ -387,7 +387,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(188, 54);
+            this.label10.Location = new System.Drawing.Point(189, 31);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 13);
             this.label10.TabIndex = 49;
@@ -396,7 +396,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(188, 92);
+            this.label11.Location = new System.Drawing.Point(189, 69);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 50;
@@ -405,7 +405,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(188, 129);
+            this.label12.Location = new System.Drawing.Point(189, 106);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 51;
@@ -414,7 +414,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(188, 167);
+            this.label13.Location = new System.Drawing.Point(189, 144);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 13);
             this.label13.TabIndex = 52;
@@ -423,7 +423,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(188, 207);
+            this.label14.Location = new System.Drawing.Point(189, 184);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(57, 13);
             this.label14.TabIndex = 53;
@@ -432,7 +432,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(188, 245);
+            this.label15.Location = new System.Drawing.Point(189, 222);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 13);
             this.label15.TabIndex = 54;
@@ -441,7 +441,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(188, 283);
+            this.label16.Location = new System.Drawing.Point(189, 260);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 13);
             this.label16.TabIndex = 55;
@@ -504,7 +504,7 @@
             // pictureBoxTwos
             // 
             this.pictureBoxTwos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxTwos.Location = new System.Drawing.Point(45, 88);
+            this.pictureBoxTwos.Location = new System.Drawing.Point(46, 65);
             this.pictureBoxTwos.Name = "pictureBoxTwos";
             this.pictureBoxTwos.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxTwos.TabIndex = 62;
@@ -514,7 +514,7 @@
             // checkBoxWarning
             // 
             this.checkBoxWarning.AutoSize = true;
-            this.checkBoxWarning.Location = new System.Drawing.Point(259, 16);
+            this.checkBoxWarning.Location = new System.Drawing.Point(302, 16);
             this.checkBoxWarning.Name = "checkBoxWarning";
             this.checkBoxWarning.Size = new System.Drawing.Size(123, 17);
             this.checkBoxWarning.TabIndex = 64;
@@ -531,7 +531,7 @@
             this.groupBox1.Size = new System.Drawing.Size(446, 194);
             this.groupBox1.TabIndex = 66;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Scoring Log";
+            this.groupBox1.Text = "Score Log";
             // 
             // groupBox2
             // 
@@ -639,30 +639,31 @@
             this.groupBox3.Size = new System.Drawing.Size(297, 401);
             this.groupBox3.TabIndex = 68;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "ScoreBoard";
+            this.groupBox3.Text = "Scoreboard";
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.textSelectedCategory);
             this.groupBox5.Controls.Add(this.btnSaveScore);
             this.groupBox5.Controls.Add(this.checkBox6);
-            this.groupBox5.Location = new System.Drawing.Point(6, 337);
+            this.groupBox5.Location = new System.Drawing.Point(6, 321);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(285, 56);
+            this.groupBox5.Size = new System.Drawing.Size(285, 72);
             this.groupBox5.TabIndex = 66;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Score Entering";
             // 
             // textSelectedCategory
             // 
-            this.textSelectedCategory.Location = new System.Drawing.Point(93, 23);
+            this.textSelectedCategory.Enabled = false;
+            this.textSelectedCategory.Location = new System.Drawing.Point(102, 36);
             this.textSelectedCategory.Name = "textSelectedCategory";
-            this.textSelectedCategory.Size = new System.Drawing.Size(69, 20);
+            this.textSelectedCategory.Size = new System.Drawing.Size(86, 20);
             this.textSelectedCategory.TabIndex = 64;
             // 
             // btnSaveScore
             // 
-            this.btnSaveScore.Location = new System.Drawing.Point(177, 20);
+            this.btnSaveScore.Location = new System.Drawing.Point(194, 34);
             this.btnSaveScore.Name = "btnSaveScore";
             this.btnSaveScore.Size = new System.Drawing.Size(75, 23);
             this.btnSaveScore.TabIndex = 65;
@@ -673,7 +674,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(11, 26);
+            this.checkBox6.Location = new System.Drawing.Point(20, 39);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(76, 17);
             this.checkBox6.TabIndex = 63;
@@ -691,7 +692,7 @@
             this.groupBox4.Size = new System.Drawing.Size(446, 80);
             this.groupBox4.TabIndex = 69;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Scoring Totals";
+            this.groupBox4.Text = "Score Totals";
             // 
             // groupBoxRoll
             // 

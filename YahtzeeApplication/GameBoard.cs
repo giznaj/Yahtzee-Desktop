@@ -20,7 +20,7 @@ namespace YahtzeeApplication
         Image[] categoryImageArray = new Image[2]; // Array of images for category (green checmkar, red x)
         Image[] rollImageArray = new Image[4]; // Array of images for the roll number
         Random randomNumbers = new Random(); // random-number generator
-        Yahtzee NewYahtzee; // Declare Yahtzee.cs object (gameboard logic)
+        Yahtzee NewYahtzee; // Declare Yahtzee.cs object (game logic)
         HelpScreen newHelper; // Declare new HelpScreen.cs object (help screen) 
         bool newGameMessage; // User enables or disables the warning message when a new game starts
         bool saveStatus; // true if the user has selected a category for the current round of rolls
@@ -132,9 +132,6 @@ namespace YahtzeeApplication
             pictureBoxFullHouse.Tag = "Full House";
             pictureBoxChance.Tag = "Chance";
             pictureBoxYahtzee.Tag = "Yahtzee";
-
-            // Enable the optional game warnings
-            checkBoxWarning.Checked = true;
         }
         #endregion
 
@@ -149,7 +146,7 @@ namespace YahtzeeApplication
         {
             textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
             textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
-            gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category : " + categoryArray[selectedIndex].Tag);
+            gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
 
             if (!NewYahtzee.GameStatus)
             {
@@ -390,7 +387,7 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void BtnNewGame_Click(object sender, EventArgs e)
         {
-            bool newGameWithWarnings = false;
+            bool newGameWithTips;
             if (NewYahtzee.GameStatus) // Enter here if there is a game in progress
             {
                 DialogResult dialogResult = MessageBox.Show("Game is not over!  Are you sure?", "Quit Game", MessageBoxButtons.YesNo);
@@ -400,13 +397,17 @@ namespace YahtzeeApplication
                     {
                         MessageBox.Show("Game tips will be displayed to you as you play the game!" +
                             "\nYou can turn these tips off at any point of the game!");
-                        newGameWithWarnings = true;
+                        newGameWithTips = true;
+                    }
+                    else
+                    {
+                        newGameWithTips = false;
                     }
 
                     // Clear the form for the new game (static methods in ultility.cs)
                     Utilities.ResetAllControls(this);
                     // Calls the newGame() method in Yahtzee
-                    NewYahtzee.NewGame(newGameWithWarnings); // Pass the boolean value Yahtzee.  Used for optional warning messages.
+                    NewYahtzee.NewGame(newGameWithTips); // Pass the boolean value Yahtzee.  Used for optional warning messages.
                     // Show roll 0 for a new game
                     pictureBoxRolls.Image = rollImageArray[0];
                     // Show the running bonus for the game
@@ -415,28 +416,42 @@ namespace YahtzeeApplication
                     textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
                     // Clear score entering selected category (should be handled in utilities in future - code is there, just not working)
                     this.textSelectedCategory.Text = null;
+
+                    if(newGameWithTips)
+                    {
+                        checkBoxWarning.Checked = true;
+                    }
                 }
             }
 
-            else
+            else // Enter here if there is no game in progress
             {
-                if (checkBoxWarning.Checked) // Enter here if there is no game in progress
+                if (checkBoxWarning.Checked) 
                 {
                     MessageBox.Show("Game tips will be displayed to you as you play the game!" +
                             "\nYou can turn these tips off at any point of the game!");
-                    newGameWithWarnings = true;
+                    newGameWithTips = true;
+                }
+                else
+                {
+                    newGameWithTips = false;
                 }
 
                 // Clear the form for the new game (static methods in ultility.cs)
                 Utilities.ResetAllControls(this);
                 // Calls the newGame() method in Yahtzee
-                NewYahtzee.NewGame(newGameWithWarnings); // Pass the boolean value Yahtzee.  Used for optional warning messages
+                NewYahtzee.NewGame(newGameWithTips); // Pass the boolean value Yahtzee.  Used for optional warning messages
                 // Show roll 0 for a new game
                 pictureBoxRolls.Image = rollImageArray[0];
                 // Show the running bonus for the game
                 textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
                 // Show the running score for the game
                 textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
+
+                if (newGameWithTips)
+                {
+                    checkBoxWarning.Checked = true;
+                }
             }
         }
 
@@ -565,7 +580,7 @@ namespace YahtzeeApplication
                 NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
                 MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
             }
-            else if (NewYahtzee.NoviceMode && NewYahtzee.RollNumber < 3 && NewYahtzee.RollNumber > 0) // Enter here if novice mode is enabled.  User should know that they have more rolls left.  User has rolled either 1 or 2 times
+            else if (NewYahtzee.GameTips && NewYahtzee.RollNumber < 3 && NewYahtzee.RollNumber > 0) // Enter here if novice mode is enabled.  User should know that they have more rolls left.  User has rolled either 1 or 2 times
             {
                 NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
                 MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
@@ -739,12 +754,12 @@ namespace YahtzeeApplication
         {
             if (checkBoxWarning.Checked)
             {
-                NewYahtzee.NoviceMode=true;
+                NewYahtzee.GameTips = true;
             }
 
             else
             {
-                NewYahtzee.NoviceMode = false;
+                NewYahtzee.GameTips = false;
             }
         }
         #endregion

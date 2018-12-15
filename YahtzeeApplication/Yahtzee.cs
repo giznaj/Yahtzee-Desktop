@@ -33,8 +33,8 @@ namespace YahtzeeApplication
         private int rollScore; // (rollScore) Roll Score.  Stores the value of the score being saved to the total
         private bool gameStatus; // Stores the games status.  If true, game is active.  If false, game is over
         private bool bonusStatus; // True if the user gets the 35 point bonus for the upper section
-        private bool noviceMode; // True to display the optional game warnings (novice users)
-        private string noviceModeMessage; // Stores the value of text to be displayed for optional warning messages
+        private bool gameTips; // True to display the optional game warnings (novice users)
+        private string gameTipsMessage; // Stores the value of text to be displayed for optional game tips messages
         private bool saveStatus = false; //status of the round scoring
         #endregion
 
@@ -126,10 +126,10 @@ namespace YahtzeeApplication
         /// <summary>
         /// If true, the user will see optional warning messages when playing.  This is for novice users.
         /// </summary>
-        public bool NoviceMode
+        public bool GameTips
         {
-            get { return noviceMode; }
-            set { noviceMode = value; }
+            get { return gameTips; }
+            set { gameTips = value; }
         }
 
         /// <summary>
@@ -137,8 +137,8 @@ namespace YahtzeeApplication
         /// </summary>
         public string NoviceModeMessage
         {
-            get { return noviceModeMessage; }
-            set { noviceModeMessage = value; }
+            get { return gameTipsMessage; }
+            set { gameTipsMessage = value; }
         }
 
         /// <summary>
@@ -204,11 +204,11 @@ namespace YahtzeeApplication
         /// Method sets the new game values to 0
         /// </summary>
         /// <param name="isNovice">parameter is true is </param>
-        public void NewGame(bool isNovice)
+        public void NewGame(bool gameTips)
         {
-            if(isNovice)
+            if(gameTips)
             {
-                NoviceMode = true; // if box is checked in the GUI, set the mode to Novice (Optional warning messages are displayed)
+                GameTips = true; // if box is checked in the GUI, set the mode to Novice (Optional warning messages are displayed)
             }
 
             // Initialize values to 0
@@ -708,7 +708,7 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public void SetNoviceModeMessage(int noviceMessageIndex)    
         {
-            if (NoviceMode)
+            if (GameTips)
             {
                 // MessageBox.Show("Roll number: " + RollNumber + "/ MessageIndex: " + noviceMessageIndex);
                 switch (noviceMessageIndex)
