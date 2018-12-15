@@ -607,7 +607,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.pictureBoxOnes);
             this.groupBox3.Controls.Add(this.pictureBoxChance);
             this.groupBox3.Controls.Add(this.pictureBoxSixes);
@@ -636,7 +635,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Location = new System.Drawing.Point(564, 13);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(297, 401);
+            this.groupBox3.Size = new System.Drawing.Size(297, 315);
             this.groupBox3.TabIndex = 68;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Scoreboard";
@@ -646,9 +645,9 @@
             this.groupBox5.Controls.Add(this.textSelectedCategory);
             this.groupBox5.Controls.Add(this.btnSaveScore);
             this.groupBox5.Controls.Add(this.checkBox6);
-            this.groupBox5.Location = new System.Drawing.Point(6, 321);
+            this.groupBox5.Location = new System.Drawing.Point(564, 334);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(285, 72);
+            this.groupBox5.Size = new System.Drawing.Size(297, 80);
             this.groupBox5.TabIndex = 66;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Score Entering";
@@ -714,6 +713,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(874, 426);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBoxRoll);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);

@@ -135,7 +135,7 @@ namespace YahtzeeApplication
         /// <summary>
         /// Sets and gets the value of the string for optional game warnings
         /// </summary>
-        public string NoviceModeMessage
+        public string GameTipsMessage
         {
             get { return gameTipsMessage; }
             set { gameTipsMessage = value; }
@@ -714,13 +714,13 @@ namespace YahtzeeApplication
                 switch (noviceMessageIndex)
                 {
                     case 0: // When the user saves their score before rolling the dice at all
-                        NoviceModeMessage = "You have to roll the dice at least 1 time.\nNot rolling at all and selecting a category will always result in 0 points!";
+                        GameTipsMessage = "You have to roll the dice at least 1 time.\nNot rolling at all and selecting a category will always result in 0 points!";
                         break;
                     case 1: // When the user rolls the dice 1 time
-                        NoviceModeMessage = "Rolling 1 time is allowed, but you have 2 more rolls... use them next time!";
+                        GameTipsMessage = "Rolling 1 time is allowed, but you have 2 more rolls... use them next time!";
                         break;
                     case 2: // When the user rolls the dice 2 times
-                        NoviceModeMessage = "Rolling 2 times is allowed and sometimes you get what you want with only 2\nWhy not use the 3rd?  Maybe a Yahtzee is waiting?";
+                        GameTipsMessage = "Rolling 2 times is allowed and sometimes you get what you want with only 2\nWhy not use the 3rd?  Maybe a Yahtzee is waiting?";
                         break;
                 }
             }

@@ -52,8 +52,9 @@ namespace YahtzeeApplication
         // instantiate the game logic and the help form
         private void Yahtzee_Load(object sender, EventArgs e)
         {
-            this.btnRollDice.Enabled = false; // Disable the roll button until a new game is started
-            this.btnNextTurn.Enabled = false; // Disable the next turn button until the new game is started
+            this.btnRollDice.Enabled = false; // Disable the 'Roll' button until a new game is started
+            this.btnNextTurn.Enabled = false; // Disable the 'Next Turn' button until the new game is started
+            this.btnSaveScore.Enabled = false; // Disable the 'Save Score' button until the new game is started
 
             // Disable all category boxes before the game starts.
             this.DisableAllCategory();
@@ -578,12 +579,12 @@ namespace YahtzeeApplication
             if (NewYahtzee.RollNumber == 0) // User has not rolled the dice at least 1 time.  User is not allowed to 'Save Score'
             {
                 NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
+                MessageBox.Show(NewYahtzee.GameTipsMessage.ToString());
             }
             else if (NewYahtzee.GameTips && NewYahtzee.RollNumber < 3 && NewYahtzee.RollNumber > 0) // Enter here if novice mode is enabled.  User should know that they have more rolls left.  User has rolled either 1 or 2 times
             {
                 NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.NoviceModeMessage.ToString());
+                MessageBox.Show(NewYahtzee.GameTipsMessage.ToString());
                 saveScore = true;
             }
             else // User has rolled 3 times.
