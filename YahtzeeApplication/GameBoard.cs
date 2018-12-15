@@ -24,6 +24,7 @@ namespace YahtzeeApplication
         private HelpScreen newHelper; // Declare new HelpScreen.cs object (help screen) 
         private bool newGameMessage; // User enables or disables the warning message when a new game starts
         private bool saveStatus; // true if the user has selected a category for the current round of rolls
+        private bool takeZeroStatus; // true if the take zero save was succesful.
         private string noScoreSaved = "You don't have the dice combination for this category." + "\n" +
                             "Did you mean to take a Zero for this category?";
         #endregion
@@ -54,6 +55,15 @@ namespace YahtzeeApplication
         {
             get { return selectedIndex; }
             set { selectedIndex = value; }
+        }
+
+        /// <summary>
+        /// Sets and gets the value for takeZeroStatus.  True if the take zero save is sucessful
+        /// </summary>
+        public bool TakeZeroStatus
+        {
+            get { return takeZeroStatus; }
+            set { takeZeroStatus = value; }
         }
         #endregion
 
@@ -154,17 +164,27 @@ namespace YahtzeeApplication
         /// </summary>
         private void DisplayScores()
         {
-            textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
-            textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
-            gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
+            if(!TakeZeroStatus)
+            {
+                textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
+                textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
+                gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
+            }
+            else if(TakeZeroStatus)
+            {
+                gameLogTextBox.AppendText("\nZero: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
+            }
+            else
+            {
+                // todo
+            }
 
-            if (!NewYahtzee.GameStatus)
+            if (!NewYahtzee.GameStatus) // Check is game is over
             {
                 if (NewYahtzee.BonusStatus)
                 {
                     gameLogTextBox.AppendText("\nYou earned the 35 point bonus!");
                 }
-
                 MessageBox.Show("Game over!\nYour final score is " + NewYahtzee.RunScore);
                 btnNextTurn.Enabled = false;
             }
@@ -213,8 +233,16 @@ namespace YahtzeeApplication
             }
             else if(checkBoxTakeZero.Checked) // User wishes to take a zero for the selected category
             {
-                NewYahtzee.TakeZero(SelectedIndex);
-                categoryArray[SelectedIndex].Image = categoryImageArray[1];
+                if(NewYahtzee.TakeZero(SelectedIndex))
+                {
+                    categoryArray[SelectedIndex].Image = categoryImageArray[1];
+                    TakeZeroStatus = true;
+                    DisplayScores();
+                }
+                else
+                {
+                    MessageBox.Show("Take Zero failed");
+                }
             }
             else
             {
@@ -385,13 +413,7 @@ namespace YahtzeeApplication
                     btnRollDice.Enabled = false;
                 }
 
-                //// If the 'Save Score' was unsuccessful, Enable the 'Roll Dice' button.
-                //if (!NewYahtzee.SaveStatus)
-                //{
-                //    btnRollDice.Enabled = true;
-                //}
-
-                // Call the DisplayScores method
+                // Update the GUI with the scores and the log window
                 DisplayScores();
             }
         }
@@ -538,14 +560,20 @@ namespace YahtzeeApplication
                     checkBoxArray[uncheckCounter].Checked = false;
                 }
 
-                // Enable all of the category pictureboxes that are null (so they can be selected for next round of scoring)
-                for (int enableCounter = 0; enableCounter < categoryArray.Length; ++enableCounter)
+                // Uncheck 'Take Zero' checkbox for next turn
+                if(checkBoxTakeZero.Checked)
                 {
-                    if (categoryArray[enableCounter].Image == null)
-                    {
-                        categoryArray[enableCounter].Enabled = true;
-                    }
+                    checkBoxTakeZero.Checked = false;
                 }
+
+                //// Enable all of the category pictureboxes that are null (so they can be selected for next round of scoring)
+                //for (int enableCounter = 0; enableCounter < categoryArray.Length; ++enableCounter)
+                //{
+                //    if (categoryArray[enableCounter].Image == null)
+                //    {
+                //        categoryArray[enableCounter].Enabled = true;
+                //    }
+                //}
 
                 // Set back to false so validation will work for the next roll
                 NewYahtzee.SaveStatus = false; 

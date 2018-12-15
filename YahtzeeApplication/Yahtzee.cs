@@ -301,12 +301,11 @@ namespace YahtzeeApplication
                 if (diceArray[diceCounter] == 1)
                 {
                     RollScore += 1;
-                    saveStatus = true; // We found a 1, changing bool value to true
+                    SaveStatus = true; // We found a 1, changing bool value to true
                 }
             }
-
             SaveScore(RollScore);
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -319,12 +318,11 @@ namespace YahtzeeApplication
                 if (diceArray[diceCounter] == 2)
                 {
                     RollScore += 2;
-                    saveStatus = true; // We found a 2, changing bool value to true
+                    SaveStatus = true; // We found a 2, changing bool value to true
                 }
             }
-
             SaveScore(RollScore);
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -338,12 +336,11 @@ namespace YahtzeeApplication
                 if (diceArray[diceCounter] == 3)
                 {
                     RollScore += 3;
-                    saveStatus = true; // We found a 3, changing bool value to true
+                    SaveStatus = true; // We found a 3, changing bool value to true
                 }
             }
-
             SaveScore(RollScore);
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -352,18 +349,16 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveFours()
         {
-            bool saveStatus = false; // Set save status to false initially.  If we find a 4, change the bool value to true
             for (int diceCounter = 0; diceCounter < diceArray.Length; ++diceCounter)
             {
                 if (diceArray[diceCounter] == 4)
                 {
                     RollScore += 4;
-                    saveStatus = true; // We found a 4, changing bool value to true
+                    SaveStatus = true; // We found a 4, changing bool value to true
                 }
             }
-
             SaveScore(RollScore);
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -372,18 +367,16 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveFives()
         {
-            bool saveStatus = false; // Set save status to false initially.  If we find a 5, change the bool value to true
             for (int diceCounter = 0; diceCounter < diceArray.Length; ++diceCounter)
             {
                 if (diceArray[diceCounter] == 5)
                 {
                     RollScore += 5;
-                    saveStatus = true; // We found a 5, changing bool value to true
+                    SaveStatus = true; // We found a 5, changing bool value to true
                 }
             }
-
             SaveScore(RollScore);
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -392,18 +385,16 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveSixes()
         {
-            bool saveStatus = false; // Set save status to false initially.  If we find a 6, change the bool value to true
             for (int diceCounter = 0; diceCounter < diceArray.Length; ++diceCounter)
             {
                 if (diceArray[diceCounter] == 6)
                 {
                     RollScore += 6;
-                    saveStatus = true; // We found a 6, changing bool value to true
+                    SaveStatus = true; // We found a 6, changing bool value to true
                 }
             }
-
             SaveScore(RollScore);
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -412,20 +403,18 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveThreeKind()
         {
-            bool saveStatus = false;
             int threeKindCounter;
             var duplicates = diceArray.GroupBy(g => g).Where(w => w.Count() > 2).Select(s => s.Key); // Check if 3 are the same
             if (duplicates.Count() > 0)
             {
-                saveStatus = true;
+                SaveStatus = true;
                 for (threeKindCounter = 0; threeKindCounter < diceArray.Length; ++threeKindCounter)
                 {
                     RollScore += diceArray[threeKindCounter];
                 }
             }
-
             SaveScore();
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -434,20 +423,18 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveFourKind()
         {
-            bool saveStatus = false;
             int fourKindCounter;
             var duplicates = diceArray.GroupBy(g => g).Where(w => w.Count() >3).Select(s => s.Key); // Check if 4 are the same
             if (duplicates.Count() > 0)
             {
-                saveStatus = true;
+                SaveStatus = true;
                 for (fourKindCounter = 0; fourKindCounter < diceArray.Length; ++fourKindCounter)
                 {
                     RollScore += diceArray[fourKindCounter];
                 }
             }
-
             SaveScore();
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -456,68 +443,63 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveFourStraight()
         {
-            bool saveStatus;
             int elementID;
-
             // Winning combo has to be either 1-2-3-4, 2-3-4-5 or 3-4-5-6.  
             // This block logic checks for 1-2-3-4
             int elementValue = 1;
             do
             {
-                saveStatus = false;
+                SaveStatus = false;
                 for (elementID = 0; elementID < diceArray.Length; ++elementID)
                 {
                     if (diceArray[elementID] == elementValue)
                     {
-                        saveStatus = true;
+                        SaveStatus = true;
                     }
                 }
-
                 ++elementValue;
                 elementID = 0;
 
             } while (saveStatus && elementValue < 5);
 
             // if 1-2-3-4 doesn't exist, check for 2-3-4-5
-            if (!saveStatus) 
+            if (!SaveStatus) 
             {
                 // Winning combo has to be either 1-2-3-4, 2-3-4-5 or 3-4-5-6.  
                 // This block logic checks for 2-3-4-5
                 elementValue = 2;
                 do
                 {
-                    saveStatus = false;
+                    SaveStatus = false;
                     for (elementID = 0; elementID < diceArray.Length; ++elementID)
                     {
                         if (diceArray[elementID] == elementValue)
                         {
-                            saveStatus = true;
+                            SaveStatus = true;
                         }
                     }
-
                     ++elementValue;
                     elementID = 0;
 
-                } while (saveStatus && elementValue < 6);
+                } while (SaveStatus && elementValue < 6);
             }
 
             // if 2-3-4-5 doesn't exist, check for 3-4-5-6
-            if (!saveStatus)
+            if (!SaveStatus)
             {
                 // Winning combo has to be either 1-2-3-4, 2-3-4-5 or 3-4-5-6.  
                 // This block logic checks for 3-4-5-6
                 elementValue = 3;
                 do
                 {
-                    saveStatus = false;
+                    SaveStatus = false;
                     for (elementID = 0; elementID < diceArray.Length; ++elementID)
                     {
                         if (diceArray[elementID] == elementValue)
                         {
-                            saveStatus = true;
+                            SaveStatus = true;
                         }
                     }
-
                     ++elementValue;
                     elementID = 0;
 
@@ -525,13 +507,12 @@ namespace YahtzeeApplication
             }
             
             // If the 4 card straight exists, give the player 30 points
-            if (saveStatus)
+            if (SaveStatus)
             {
                 RollScore += 30;
             }
-
             SaveScore();
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -541,45 +522,42 @@ namespace YahtzeeApplication
         public bool SaveFiveStraight()
         {
             int fiveCounter;
-            bool saveStatus;
             Array.Sort(diceArray); // Sort array in ascending order.  Winning combo has to be either 1-2-3-4-5 or 2-3-4-5-6
             if (diceArray[0] == 1) // If first element is a 1, we check for 1-2-3-4-5
             {
-                saveStatus = true;
+                SaveStatus = true;
                 for (fiveCounter = 0; fiveCounter < diceArray.Length; ++fiveCounter)
                 {
                     if (diceArray[fiveCounter] != fiveCounter + 1)
                     {
-                        saveStatus = false;
+                        SaveStatus = false;
                     }
                 }    
             }
             
             else if (diceArray[0] == 2) // If first element is a 2, we check for 2-3-4-5-6
             {
-                saveStatus = true;
+                SaveStatus = true;
                 for (fiveCounter = 0; fiveCounter < diceArray.Length; ++fiveCounter)
                 {
                     if (diceArray[fiveCounter] != fiveCounter + 2)
                     {
-                        saveStatus = false;
+                        SaveStatus = false;
                     }
                 }  
             }
-            
             else  // Lowest card the player has is a 3, so there is no way to achieve a 5 card straight
             {
-                saveStatus = false;
+                SaveStatus = false;
             }
 
             // If the 5 card straight exists, give the player 40 points
-            if (saveStatus)
+            if (SaveStatus)
             {
                 RollScore += 40;
             }
-
             SaveScore();
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -588,25 +566,21 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveFullHouse()
         {
-            bool saveStatus;
             Dictionary<int, int> counts = diceArray.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count());
             var threeOfAKind = diceArray.GroupBy(g => g).Where(w => w.Count() == 3).Select(s => s.Key); // Check if 3 are the same
             var twoOfAKind = diceArray.GroupBy(g => g).Where(w => w.Count() == 2).Select(s => s.Key); // Check if 2 are the same
-
             if(threeOfAKind.Count() == 1 && twoOfAKind.Count() == 1) // True if there are 2 groups of numbers
 
             {
                 RollScore += 25;
-                saveStatus = true;
+                SaveStatus = true;
             }
-
             else
             {
-                saveStatus = false;
+                SaveStatus = false;
             }
-
             SaveScore();
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -615,7 +589,6 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveChance()
         {
-            bool saveStatus;
             int chanceCounter;
             for (chanceCounter = 0; chanceCounter < diceArray.Length; ++chanceCounter)
             {
@@ -623,8 +596,8 @@ namespace YahtzeeApplication
             }
 
             SaveScore();
-            saveStatus = true;
-            return saveStatus;
+            SaveStatus = true;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -633,21 +606,18 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public bool SaveYahtzee()
         {
-            bool saveStatus;
             Array.Sort(diceArray); // Sort the array in ascending order.
             if (diceArray[0] != diceArray[4]) // If element 0 and element 4 are not the same, there is no Yahtzee
             {
                 saveStatus = false;
             }
-
             else // Yahtzee is found!  :-)
             {
-                saveStatus = true;
+                SaveStatus = true;
                 if (NumOfYahtzee >= 1)
                 {
                     RollScore += 100;
                 }
-
                 else
                 {
                     RollScore += 50;
@@ -655,9 +625,8 @@ namespace YahtzeeApplication
 
                 NumOfYahtzee += NumOfYahtzee;
             }
-
             SaveScore();
-            return saveStatus;
+            return SaveStatus;
         }
 
         /// <summary>
@@ -702,9 +671,11 @@ namespace YahtzeeApplication
         /// Performs the validation and sets the category the user is taking a 0 for
         /// </summary>
         /// <param name="categoryId">The score being saved for this roll</param>
-        public void TakeZero(int categoryId)
+        public bool TakeZero(int categoryId)
         {
             CategoryUsed += 1;
+            SaveStatus = true;
+            return SaveStatus;
         }
 
         /// <summary>
