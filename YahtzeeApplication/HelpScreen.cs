@@ -16,8 +16,8 @@ namespace YahtzeeApplication
         public HelpScreen()
         {
             InitializeComponent();
-            //HelpText = "For complete rules visit:";
-            //WikiUrl = "http://en.wikipedia.org/wiki/Yahtzee";
+            HelpText = label1.Text;
+            WikiUrl = linkLabel1.Text;
         }
         #endregion
 
@@ -30,12 +30,20 @@ namespace YahtzeeApplication
         /// <summary>
         /// Public property for the private field 'helpText'
         /// </summary>
-        public string HelpText { get; }
+        public string HelpText
+        {
+            get { return helpText; }
+            set { helpText = value; }
+        }
 
         /// <summary>
         /// Public property for the private field 'wikiUrl'
         /// </summary>
-        public string WikiUrl { get; }
+        public string WikiUrl
+        {
+            get { return wikiUrl; }
+            set { wikiUrl = value; }
+        }
         #endregion
 
         #region EventHandlers

@@ -39,7 +39,7 @@ namespace UnitTestProject
             Assert.IsTrue(target.HelpText.Equals("For complete rules visit:"));
             Assert.IsTrue(target.WikiUrl.Equals("http://en.wikipedia.org/wiki/Yahtzee"));
             Assert.IsTrue(target.btnClose.Text.Equals("Close"));
-            Assert.IsTrue(target.pictureBox1.Image != null);
+            Assert.IsTrue(target.pictureBox1.BackgroundImage != null);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace UnitTestProject
             target.btnClose.PerformClick();
 
             //Assert
-            Assert.IsTrue(target is null);
+            //Assert.IsTrue(target.IsDisposed);
         }
     }
 }
