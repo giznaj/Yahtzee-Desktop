@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace YahtzeeApplication
 {
-    class Utilities
+    internal class Utilities
     {
         public static void ResetAllControls(Control form)
         {

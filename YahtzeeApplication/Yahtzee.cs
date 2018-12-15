@@ -20,12 +20,12 @@ using YahtzeeApplication;
 
 namespace YahtzeeApplication
 {
-    class Yahtzee
+    internal class Yahtzee
     {
         #region Private Members
-        int[] diceArray; // Array of dice
-        int categoryUsed; // When this becomes 13, the game is over.  There are 13 categories in the game of Yahtzee
-        Random randomNumbers = new Random(); // random-number generator
+        private int[] diceArray; // Array of dice
+        private int categoryUsed; // When this becomes 13, the game is over.  There are 13 categories in the game of Yahtzee
+        private Random randomNumbers = new Random(); // random-number generator
         private int numOfYahtzee; // Keeps track of the number of Yahtzee's the user has scored
         private int rollNumber; // (rollNumber) Roll number.  This is what roll number the player is on 
         private int runBonus; // (runBonus) Running bonus (63 gets you 35 more)
@@ -180,7 +180,6 @@ namespace YahtzeeApplication
             {
                 diceArray[x] = 0;
             }
-
             numOfYahtzee = 0;
         }
         #endregion
@@ -623,7 +622,6 @@ namespace YahtzeeApplication
                 RollScore += diceArray[chanceCounter];
             }
 
-
             SaveScore();
             saveStatus = true;
             return saveStatus;
@@ -706,12 +704,12 @@ namespace YahtzeeApplication
         /// depending on what the parameter is, the message will change.
         /// </summary>
         /// <returns></returns>
-        public void SetNoviceModeMessage(int noviceMessageIndex)    
+        public void SetNoviceModeMessage(int TipsMessageId)    
         {
             if (GameTips)
             {
-                // MessageBox.Show("Roll number: " + RollNumber + "/ MessageIndex: " + noviceMessageIndex);
-                switch (noviceMessageIndex)
+                MessageBox.Show("Roll number: " + RollNumber + "/ MessageIndex: " + TipsMessageId);
+                switch (TipsMessageId)
                 {
                     case 0: // When the user saves their score before rolling the dice at all
                         GameTipsMessage = "You have to roll the dice at least 1 time.\nNot rolling at all and selecting a category will always result in 0 points!";

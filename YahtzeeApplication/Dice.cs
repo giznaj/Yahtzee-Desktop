@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace YahtzeeApplication
 {
-    class Dice
+    internal class Dice
     {
 
     }

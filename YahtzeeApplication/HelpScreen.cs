@@ -19,7 +19,7 @@ namespace YahtzeeApplication
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
