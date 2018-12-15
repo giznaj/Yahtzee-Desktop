@@ -121,22 +121,23 @@ namespace YahtzeeApplication
             pictureBoxArray[4] = picDiceBox5;
 
             // Array of dice images themselves that populate the PictureBox array
-            diceImageArray[0] = Image.FromFile("..\\..\\..\\Resources\\1.dice.gif");
-            diceImageArray[1] = Image.FromFile("2.dice.GIF");
-            diceImageArray[2] = Image.FromFile("3.dice.GIF");
-            diceImageArray[3] = Image.FromFile("4.dice.GIF");
-            diceImageArray[4] = Image.FromFile("5.dice.GIF");
-            diceImageArray[5] = Image.FromFile("6.dice.GIF");
+            //diceImageArray[0] = Image.FromFile("..\\..\\..\\Resources\\1.dice.gif");
+            diceImageArray[0] = Image.FromFile("Images\\1.dice.gif");
+            diceImageArray[1] = Image.FromFile("Images\\2.dice.GIF");
+            diceImageArray[2] = Image.FromFile("Images\\3.dice.GIF");
+            diceImageArray[3] = Image.FromFile("Images\\4.dice.GIF");
+            diceImageArray[4] = Image.FromFile("Images\\5.dice.GIF");
+            diceImageArray[5] = Image.FromFile("Images\\6.dice.GIF");
 
             // Array of status images (Green checkmark or Red X)
-            categoryImageArray[0] = Image.FromFile("green_checkmark.GIF");
-            categoryImageArray[1] = Image.FromFile("red_x.GIF");
+            categoryImageArray[0] = Image.FromFile("Images\\green_checkmark.GIF");
+            categoryImageArray[1] = Image.FromFile("Images\\red_x.GIF");
 
             // Array of images for the roll number
-            rollImageArray[0] = Image.FromFile("rollZero.PNG");
-            rollImageArray[1] = Image.FromFile("rollOne.PNG");
-            rollImageArray[2] = Image.FromFile("rollTwo.PNG");
-            rollImageArray[3] = Image.FromFile("rollThree.PNG");
+            rollImageArray[0] = Image.FromFile("Images\\rollZero.PNG");
+            rollImageArray[1] = Image.FromFile("Images\\rollOne.PNG");
+            rollImageArray[2] = Image.FromFile("Images\\rollTwo.PNG");
+            rollImageArray[3] = Image.FromFile("Images\\rollThree.PNG");
 
             // Display friendly name for all categories (the pictureboxes you click for points)
             pictureBoxOnes.Tag = "Ones";

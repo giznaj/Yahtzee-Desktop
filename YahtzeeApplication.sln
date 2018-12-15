@@ -15,23 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{F02B8F3F-8
 		Docs\Use Help - Test run summary.docx = Docs\Use Help - Test run summary.docx
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{D406721F-7860-46A6-8014-0202B62CD567}"
-	ProjectSection(SolutionItems) = preProject
-		Resources\1.dice.gif = Resources\1.dice.gif
-		Resources\2.dice.gif = Resources\2.dice.gif
-		Resources\3.dice.gif = Resources\3.dice.gif
-		Resources\4.dice.gif = Resources\4.dice.gif
-		Resources\5.dice.gif = Resources\5.dice.gif
-		Resources\6.dice.gif = Resources\6.dice.gif
-		Resources\green_checkmark.gif = Resources\green_checkmark.gif
-		Resources\red_x.gif = Resources\red_x.gif
-		Resources\rollOne.png = Resources\rollOne.png
-		Resources\rollThree.png = Resources\rollThree.png
-		Resources\rollTwo.png = Resources\rollTwo.png
-		Resources\rollZero.png = Resources\rollZero.png
-		Resources\yahtzee.jpg = Resources\yahtzee.jpg
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
