@@ -110,7 +110,7 @@ namespace YahtzeeApplication
             pictureBoxArray[3] = picDiceBox4;
             pictureBoxArray[4] = picDiceBox5;
 
-            // Array of dice images that populate the PictureBox array
+            // Array of dice images themselves that populate the PictureBox array
             diceImageArray[0] = Image.FromFile("1.dice.GIF");
             diceImageArray[1] = Image.FromFile("2.dice.GIF");
             diceImageArray[2] = Image.FromFile("3.dice.GIF");
@@ -207,13 +207,14 @@ namespace YahtzeeApplication
         /// </summary>
         public void SaveScore()
         {
-            if (NewYahtzee.RollNumber == 0)
-            {
-                MessageBox.Show("You haven't rolled the dice yet!\nPlease roll the dice first!");
-            }
-            else if (textSelectedCategory.Text.Length == 0)
+            if (textSelectedCategory.Text.Length == 0) // User has not selected a category
             {
                 MessageBox.Show("You must select a category first!\nThen either take a 0, or your score!");
+            }
+            else if(checkBoxTakeZero.Checked) // User wishes to take a zero for the selected category
+            {
+                NewYahtzee.TakeZero(SelectedIndex);
+                categoryArray[SelectedIndex].Image = categoryImageArray[1];
             }
             else
             {
@@ -384,11 +385,11 @@ namespace YahtzeeApplication
                     btnRollDice.Enabled = false;
                 }
 
-                // If the 'Save Score' was unsuccessful, Enable the 'Roll Dice' button.
-                if (!NewYahtzee.SaveStatus)
-                {
-                    btnRollDice.Enabled = true;
-                }
+                //// If the 'Save Score' was unsuccessful, Enable the 'Roll Dice' button.
+                //if (!NewYahtzee.SaveStatus)
+                //{
+                //    btnRollDice.Enabled = true;
+                //}
 
                 // Call the DisplayScores method
                 DisplayScores();
@@ -410,17 +411,8 @@ namespace YahtzeeApplication
                 DialogResult dialogResult = MessageBox.Show("Game is not over!  Are you sure?", "Quit Game", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    if (checkBoxWarning.Checked)
-                    {
-                        MessageBox.Show("Game tips will be displayed to you as you play the game!" +
-                            "\nYou can turn these tips off at any point of the game!");
-                        newGameWithTips = true;
-                    }
-                    else
-                    {
-                        newGameWithTips = false;
-                    }
-
+                    newGameWithTips = false;
+                    
                     // Clear the form for the new game (static methods in ultility.cs)
                     Utilities.ResetAllControls(this);
                     // Calls the newGame() method in Yahtzee
@@ -434,26 +426,13 @@ namespace YahtzeeApplication
                     // Clear score entering selected category (should be handled in utilities in future - code is there, just not working)
                     textSelectedCategory.Text = null;
 
-                    if(newGameWithTips)
-                    {
-                        checkBoxWarning.Checked = true;
                     }
-                }
             }
 
             else // Enter here if there is no game in progress
             {
-                if (checkBoxWarning.Checked) 
-                {
-                    MessageBox.Show("Game tips will be displayed to you as you play the game!" +
-                            "\nYou can turn these tips off at any point of the game!");
-                    newGameWithTips = true;
-                }
-                else
-                {
-                    newGameWithTips = false;
-                }
-
+                newGameWithTips = false;
+                
                 // Clear the form for the new game (static methods in ultility.cs)
                 Utilities.ResetAllControls(this);
                 // Calls the newGame() method in Yahtzee
@@ -464,11 +443,6 @@ namespace YahtzeeApplication
                 textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
                 // Show the running score for the game
                 textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
-
-                if (newGameWithTips)
-                {
-                    checkBoxWarning.Checked = true;
-                }
             }
         }
 
@@ -592,18 +566,12 @@ namespace YahtzeeApplication
         private void BtnSaveScore_Click(object sender, EventArgs e)
         {
             bool saveScore = false;
-            if (NewYahtzee.GameTips && NewYahtzee.RollNumber == 0) // User has not rolled the dice at least 1 time.  User is not allowed to 'Save Score'
+            if (NewYahtzee.RollNumber == 0) // User has not rolled the dice at least 1 time.  User is not allowed to 'Save Score'
             {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
+                NewYahtzee.GameMessages(NewYahtzee.RollNumber);
                 MessageBox.Show(NewYahtzee.GameTipsMessage.ToString());
             }
-            else if (NewYahtzee.GameTips && (NewYahtzee.RollNumber == 1 || NewYahtzee.RollNumber == 2)) // Enter here if novice mode is enabled.  User should know that they have more rolls left.  User has rolled either 1 or 2 times
-            {
-                NewYahtzee.SetNoviceModeMessage(NewYahtzee.RollNumber);
-                MessageBox.Show(NewYahtzee.GameTipsMessage.ToString());
-                saveScore = true;
-            }
-            else // User has rolled 3 times.
+            else // User has rolled at least 1 time
             {
                 saveScore = true;
             }
@@ -760,24 +728,6 @@ namespace YahtzeeApplication
         {
             DisplaySelectedCategory("yahtzee");
             selectedIndex = 12;
-        }
-
-        /// <summary>
-        /// If checked turn novice mode on and display optional game warnings
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void checkBoxWarning_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxWarning.Checked)
-            {
-                NewYahtzee.GameTips = true;
-            }
-
-            else
-            {
-                NewYahtzee.GameTips = false;
-            }
         }
         #endregion
     }

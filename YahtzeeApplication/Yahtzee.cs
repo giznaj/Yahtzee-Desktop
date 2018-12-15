@@ -699,29 +699,36 @@ namespace YahtzeeApplication
         }
 
         /// <summary>
+        /// Performs the validation and sets the category the user is taking a 0 for
+        /// </summary>
+        /// <param name="categoryId">The score being saved for this roll</param>
+        public void TakeZero(int categoryId)
+        {
+            CategoryUsed += 1;
+        }
+
+        /// <summary>
         /// Returns a string based on a boolean and paramater value.
         /// if the boolean value is true, the novice mode is on (enabled)
         /// depending on what the parameter is, the message will change.
         /// </summary>
         /// <returns></returns>
-        public void SetNoviceModeMessage(int TipsMessageId)    
+        public string GameMessages(int GameMessageId)    
         {
-            if (GameTips)
+            //MessageBox.Show("Roll number: " + RollNumber + "/ MessageIndex: " + TipsMessageId);
+            switch (GameMessageId)
             {
-                MessageBox.Show("Roll number: " + RollNumber + "/ MessageIndex: " + TipsMessageId);
-                switch (TipsMessageId)
-                {
-                    case 0: // When the user saves their score before rolling the dice at all
-                        GameTipsMessage = "You have to roll the dice at least 1 time.\nNot rolling at all and selecting a category will always result in 0 points!";
-                        break;
-                    case 1: // When the user rolls the dice 1 time
-                        GameTipsMessage = "Rolling 1 time is allowed, but you have 2 more rolls... use them next time!";
-                        break;
-                    case 2: // When the user rolls the dice 2 times
-                        GameTipsMessage = "Rolling 2 times is allowed and sometimes you get what you want with only 2\nWhy not use the 3rd?  Maybe a Yahtzee is waiting?";
-                        break;
-                }
+                case 0: // When the user saves their score before rolling the dice at all
+                    GameTipsMessage = "You have to roll the dice at least 1 time.\nNot rolling at all and selecting a category will always result in 0 points!";
+                    break;
+                case 1: // When the user rolls the dice 1 time
+                    GameTipsMessage = "Rolling 1 time is allowed, but you have 2 more rolls... use them next time!";
+                    break;
+                case 2: // When the user rolls the dice 2 times
+                    GameTipsMessage = "Rolling 2 times is allowed and sometimes you get what you want with only 2\nWhy not use the 3rd?  Maybe a Yahtzee is waiting?";
+                    break;
             }
+            return GameTipsMessage.ToString();
         }
         #endregion            
     }

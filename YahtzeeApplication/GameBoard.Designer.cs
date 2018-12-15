@@ -71,7 +71,6 @@
             this.picDiceBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBoxRolls = new System.Windows.Forms.PictureBox();
             this.pictureBoxTwos = new System.Windows.Forms.PictureBox();
-            this.checkBoxWarning = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnNewGame = new System.Windows.Forms.Button();
@@ -83,7 +82,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textSelectedCategory = new System.Windows.Forms.TextBox();
             this.btnSaveScore = new System.Windows.Forms.Button();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBoxTakeZero = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBoxRoll = new System.Windows.Forms.GroupBox();
             this.gUIBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -118,10 +117,10 @@
             // 
             // gameLogTextBox
             // 
-            this.gameLogTextBox.Location = new System.Drawing.Point(20, 39);
+            this.gameLogTextBox.Location = new System.Drawing.Point(20, 23);
             this.gameLogTextBox.Name = "gameLogTextBox";
             this.gameLogTextBox.ReadOnly = true;
-            this.gameLogTextBox.Size = new System.Drawing.Size(405, 141);
+            this.gameLogTextBox.Size = new System.Drawing.Size(405, 157);
             this.gameLogTextBox.TabIndex = 5;
             this.gameLogTextBox.Text = "";
             // 
@@ -511,21 +510,9 @@
             this.pictureBoxTwos.TabStop = false;
             this.pictureBoxTwos.Click += new System.EventHandler(this.pictureBoxTwos_Click);
             // 
-            // checkBoxWarning
-            // 
-            this.checkBoxWarning.AutoSize = true;
-            this.checkBoxWarning.Location = new System.Drawing.Point(302, 16);
-            this.checkBoxWarning.Name = "checkBoxWarning";
-            this.checkBoxWarning.Size = new System.Drawing.Size(123, 17);
-            this.checkBoxWarning.TabIndex = 64;
-            this.checkBoxWarning.Text = "Optional Game Hints";
-            this.checkBoxWarning.UseVisualStyleBackColor = true;
-            this.checkBoxWarning.CheckedChanged += new System.EventHandler(this.checkBoxWarning_CheckedChanged);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.gameLogTextBox);
-            this.groupBox1.Controls.Add(this.checkBoxWarning);
             this.groupBox1.Location = new System.Drawing.Point(112, 134);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(446, 194);
@@ -644,7 +631,7 @@
             // 
             this.groupBox5.Controls.Add(this.textSelectedCategory);
             this.groupBox5.Controls.Add(this.btnSaveScore);
-            this.groupBox5.Controls.Add(this.checkBox6);
+            this.groupBox5.Controls.Add(this.checkBoxTakeZero);
             this.groupBox5.Location = new System.Drawing.Point(564, 334);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(297, 80);
@@ -670,15 +657,15 @@
             this.btnSaveScore.UseVisualStyleBackColor = true;
             this.btnSaveScore.Click += new System.EventHandler(this.BtnSaveScore_Click);
             // 
-            // checkBox6
+            // checkBoxTakeZero
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(20, 39);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(76, 17);
-            this.checkBox6.TabIndex = 63;
-            this.checkBox6.Text = "Take Zero";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBoxTakeZero.AutoSize = true;
+            this.checkBoxTakeZero.Location = new System.Drawing.Point(20, 39);
+            this.checkBoxTakeZero.Name = "checkBoxTakeZero";
+            this.checkBoxTakeZero.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxTakeZero.TabIndex = 63;
+            this.checkBoxTakeZero.Text = "Take Zero";
+            this.checkBoxTakeZero.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -743,7 +730,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRolls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTwos)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBoxButtons.ResumeLayout(false);
@@ -804,7 +790,6 @@
         private System.Windows.Forms.PictureBox picDiceBox5;
         private System.Windows.Forms.PictureBox pictureBoxRolls;
         private System.Windows.Forms.PictureBox pictureBoxTwos;
-        private System.Windows.Forms.CheckBox checkBoxWarning;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnNewGame;
@@ -815,7 +800,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBoxRoll;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBoxTakeZero;
         private System.Windows.Forms.Button btnSaveScore;
         private System.Windows.Forms.TextBox textSelectedCategory;
         private System.Windows.Forms.GroupBox groupBox5;
