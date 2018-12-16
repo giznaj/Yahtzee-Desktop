@@ -35,7 +35,8 @@ namespace YahtzeeApplication
         private bool bonusStatus; // True if the user gets the 35 point bonus for the upper section
         private bool gameTips; // True to display the optional game warnings (novice users)
         private string gameTipsMessage; // Stores the value of text to be displayed for optional game tips messages
-        private bool saveStatus = false; //status of the round scoring
+        private bool saveStatus = false; // Status of the round scoring
+        private bool takeZeroStatus = false; // Status of the take zero scoring
         #endregion
 
         #region Public Properties
@@ -148,6 +149,15 @@ namespace YahtzeeApplication
         {
             get { return saveStatus; }
             set { saveStatus = value; }
+        }
+
+        /// <summary>
+        /// Sets and gets the boolean value for the take zero status for the round score
+        /// </summary>
+        public bool TakeZeroStatus
+        {
+            get { return takeZeroStatus; }
+            set { takeZeroStatus = value; }
         }
 
         /// <summary>
@@ -675,6 +685,7 @@ namespace YahtzeeApplication
         {
             CategoryUsed += 1;
             SaveStatus = true;
+            TakeZeroStatus = true;
             return SaveStatus;
         }
 

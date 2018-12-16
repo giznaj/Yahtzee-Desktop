@@ -76,7 +76,7 @@ namespace YahtzeeApplication
             btnSaveScore.Enabled = false; // Disable the 'Save Score' button until the new game is started
 
             // Disable all category boxes before the game starts.
-            DisableAllCategory();
+            // DisableAllCategory();
         }
         #endregion
 
@@ -121,8 +121,7 @@ namespace YahtzeeApplication
             pictureBoxArray[4] = picDiceBox5;
 
             // Array of dice images themselves that populate the PictureBox array
-            //diceImageArray[0] = Image.FromFile("..\\..\\..\\Resources\\1.dice.gif");
-            diceImageArray[0] = Image.FromFile("Images\\1.dice.gif");
+            diceImageArray[0] = Image.FromFile("Images\\1.dice.GIF");
             diceImageArray[1] = Image.FromFile("Images\\2.dice.GIF");
             diceImageArray[2] = Image.FromFile("Images\\3.dice.GIF");
             diceImageArray[3] = Image.FromFile("Images\\4.dice.GIF");
@@ -161,38 +160,7 @@ namespace YahtzeeApplication
 
         #region Public Methods
         /// <summary>
-        /// Method displays scores and information to the gameboard.
-        /// </summary>
-        private void DisplayScores()
-        {
-            if(!TakeZeroStatus)
-            {
-                textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
-                textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
-                gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
-            }
-            else if(TakeZeroStatus)
-            {
-                gameLogTextBox.AppendText("\nZero: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
-            }
-            else
-            {
-                // todo
-            }
-
-            if (!NewYahtzee.GameStatus) // Check is game is over
-            {
-                if (NewYahtzee.BonusStatus)
-                {
-                    gameLogTextBox.AppendText("\nYou earned the 35 point bonus!");
-                }
-                MessageBox.Show("Game over!\nYour final score is " + NewYahtzee.RunScore);
-                btnNextTurn.Enabled = false;
-            }
-        }
-
-        /// <summary>
-        /// Method displays the dice.  Images are in 'Projects\Yahtzee\YahtzeeApplication\YahtzeeApplication\bin\Debug'
+        /// Method displays the dice. 
         /// </summary>
         /// <param name="diceArray"></param>
         private void DisplayRoll(int[] diceArray)
@@ -207,13 +175,13 @@ namespace YahtzeeApplication
         /// <summary>
         /// Disables all category pictureboxes until the next roll.  Stops the user from clicking more than 1 category between rolls
         /// </summary>
-        public void DisableAllCategory()
-        {
-            for (int disableCounter = 0; disableCounter < categoryArray.Length; ++disableCounter)
-            {
-                categoryArray[disableCounter].Enabled = false;
-            }
-        }
+        //public void DisableAllCategory()
+        //{
+        //    for (int disableCounter = 0; disableCounter < categoryArray.Length; ++disableCounter)
+        //    {
+        //        categoryArray[disableCounter].Enabled = false;
+        //    }
+        //}
 
         /// <summary>
         /// displayes the selected category in the textbox on GUI
@@ -237,7 +205,6 @@ namespace YahtzeeApplication
                 if(NewYahtzee.TakeZero(SelectedIndex))
                 {
                     categoryArray[SelectedIndex].Image = categoryImageArray[1];
-                    TakeZeroStatus = true;
                     DisplayScores();
                 }
                 else
@@ -407,6 +374,34 @@ namespace YahtzeeApplication
                 DisplayScores();
             }
         }
+
+        /// <summary>
+        /// Method displays scores and information to the gameboard.
+        /// </summary>
+        private void DisplayScores()
+        {
+           textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
+           textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
+
+            if(!NewYahtzee.TakeZeroStatus) // Regular round score saved
+            {
+                gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
+            }
+            else // User took a zero for a category (TakeZeroStatus == true)
+            {
+                gameLogTextBox.AppendText("\nZero: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
+            }
+
+            if (!NewYahtzee.GameStatus) // Check is game is over
+            {
+                if (NewYahtzee.BonusStatus)
+                {
+                    gameLogTextBox.AppendText("\nYou earned the 35 point bonus!");
+                }
+                MessageBox.Show("Game over!\nYour final score is " + NewYahtzee.RunScore);
+                btnNextTurn.Enabled = false;
+            }
+        }
         #endregion
 
         #region Event Handlers
@@ -550,9 +545,13 @@ namespace YahtzeeApplication
                     checkBoxArray[uncheckCounter].Checked = false;
                 }
 
+                // Set back to false so validation will work for the next roll
+                NewYahtzee.SaveStatus = false;
+
                 // Uncheck 'Take Zero' checkbox for next turn
-                if(checkBoxTakeZero.Checked)
+                if (NewYahtzee.TakeZeroStatus)
                 {
+                    NewYahtzee.TakeZeroStatus = false;
                     checkBoxTakeZero.Checked = false;
                 }
 
@@ -563,10 +562,7 @@ namespace YahtzeeApplication
                 //    {
                 //        categoryArray[enableCounter].Enabled = true;
                 //    }
-                //}
-
-                // Set back to false so validation will work for the next roll
-                NewYahtzee.SaveStatus = false; 
+                //} 
             }
 
             else
@@ -583,7 +579,6 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void BtnSaveScore_Click(object sender, EventArgs e)
         {
-            bool saveScore = false;
             if (NewYahtzee.RollNumber == 0) // User has not rolled the dice at least 1 time.  User is not allowed to 'Save Score'
             {
                 NewYahtzee.GameMessages(NewYahtzee.RollNumber);
@@ -591,17 +586,7 @@ namespace YahtzeeApplication
             }
             else // User has rolled at least 1 time
             {
-                saveScore = true;
-            }
-
-            // Call 'SaveScore' method (user is in valid scenario/state (1, 2 or 3 rolls used)
-            if (saveScore)
-            {
                 SaveScore();
-            }
-            else
-            {
-                //todo
             }
         }
 
