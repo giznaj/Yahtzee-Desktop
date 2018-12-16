@@ -73,11 +73,13 @@
             this.pictureBoxTwos = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelDiceBox1 = new System.Windows.Forms.Label();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnRollDice = new System.Windows.Forms.Button();
             this.btnNextTurn = new System.Windows.Forms.Button();
             this.groupBoxButtons = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textSelectedCategory = new System.Windows.Forms.TextBox();
@@ -85,8 +87,8 @@
             this.checkBoxTakeZero = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBoxRoll = new System.Windows.Forms.GroupBox();
+            this.labelRollNumber = new System.Windows.Forms.Label();
             this.gUIBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSixes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYahtzee)).BeginInit();
@@ -450,9 +452,9 @@
             // picDiceBox1
             // 
             this.picDiceBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picDiceBox1.Location = new System.Drawing.Point(20, 27);
+            this.picDiceBox1.Location = new System.Drawing.Point(360, 19);
             this.picDiceBox1.Name = "picDiceBox1";
-            this.picDiceBox1.Size = new System.Drawing.Size(55, 55);
+            this.picDiceBox1.Size = new System.Drawing.Size(23, 40);
             this.picDiceBox1.TabIndex = 56;
             this.picDiceBox1.TabStop = false;
             // 
@@ -495,9 +497,9 @@
             // pictureBoxRolls
             // 
             this.pictureBoxRolls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxRolls.Location = new System.Drawing.Point(16, 27);
+            this.pictureBoxRolls.Location = new System.Drawing.Point(332, 19);
             this.pictureBoxRolls.Name = "pictureBoxRolls";
-            this.pictureBoxRolls.Size = new System.Drawing.Size(62, 62);
+            this.pictureBoxRolls.Size = new System.Drawing.Size(22, 40);
             this.pictureBoxRolls.TabIndex = 61;
             this.pictureBoxRolls.TabStop = false;
             // 
@@ -523,7 +525,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.picDiceBox1);
+            this.groupBox2.Controls.Add(this.labelDiceBox1);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox3);
@@ -539,6 +541,15 @@
             this.groupBox2.TabIndex = 67;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dice";
+            // 
+            // labelDiceBox1
+            // 
+            this.labelDiceBox1.AutoSize = true;
+            this.labelDiceBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiceBox1.Location = new System.Drawing.Point(29, 31);
+            this.labelDiceBox1.Name = "labelDiceBox1";
+            this.labelDiceBox1.Size = new System.Drawing.Size(0, 42);
+            this.labelDiceBox1.TabIndex = 61;
             // 
             // btnNewGame
             // 
@@ -593,6 +604,16 @@
             this.groupBoxButtons.TabIndex = 65;
             this.groupBoxButtons.TabStop = false;
             this.groupBoxButtons.Text = "Actions";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 251);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox3
             // 
@@ -671,6 +692,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.picDiceBox1);
+            this.groupBox4.Controls.Add(this.pictureBoxRolls);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.textRunScore);
             this.groupBox4.Controls.Add(this.label1);
@@ -684,7 +707,7 @@
             // 
             // groupBoxRoll
             // 
-            this.groupBoxRoll.Controls.Add(this.pictureBoxRolls);
+            this.groupBoxRoll.Controls.Add(this.labelRollNumber);
             this.groupBoxRoll.Location = new System.Drawing.Point(12, 13);
             this.groupBoxRoll.Name = "groupBoxRoll";
             this.groupBoxRoll.Size = new System.Drawing.Size(94, 115);
@@ -692,19 +715,18 @@
             this.groupBoxRoll.TabStop = false;
             this.groupBoxRoll.Text = "Rolls Taken";
             // 
+            // labelRollNumber
+            // 
+            this.labelRollNumber.AutoSize = true;
+            this.labelRollNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRollNumber.Location = new System.Drawing.Point(13, 27);
+            this.labelRollNumber.Name = "labelRollNumber";
+            this.labelRollNumber.Size = new System.Drawing.Size(0, 76);
+            this.labelRollNumber.TabIndex = 0;
+            // 
             // gUIBindingSource
             // 
             this.gUIBindingSource.DataSource = typeof(YahtzeeApplication.GameBoard);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(7, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GameBoard
             // 
@@ -752,6 +774,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBoxRoll.ResumeLayout(false);
+            this.groupBoxRoll.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gUIBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -817,6 +840,8 @@
         private System.Windows.Forms.GroupBox groupBox5;
         public System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelRollNumber;
+        public System.Windows.Forms.Label labelDiceBox1;
     }
 }
 

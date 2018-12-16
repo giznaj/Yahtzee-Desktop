@@ -177,6 +177,7 @@ namespace YahtzeeApplication
                     NewYahtzee.NewGame();
                     // Show roll 0 for a new game
                     //pictureBoxRolls.Image = rollImageArray[0];
+                    labelRollNumber.Text = "0";
                     // Show the running bonus for the game
                     textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
                     // Show the running score for the game
@@ -191,9 +192,10 @@ namespace YahtzeeApplication
                 // Clear the form for the new game (static methods in ultility.cs)
                 Utilities.ResetAllControls(this);
                 // Calls the newGame() method in Yahtzee
-                NewYahtzee.NewGame(); 
+                NewYahtzee.NewGame();
                 // Show roll 0 for a new game
                 //pictureBoxRolls.Image = rollImageArray[0];
+                labelRollNumber.Text = "0";
                 // Show the running bonus for the game
                 textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
                 // Show the running score for the game
@@ -238,6 +240,7 @@ namespace YahtzeeApplication
 
             // Display the roll number. 
             //pictureBoxRolls.Image = rollImageArray[NewYahtzee.RollNumber];
+            labelRollNumber.Text = NewYahtzee.RollNumber.ToString(); ;
 
             // Check to see if user has rolled the dice 3 times.  If so, disable to the roll button
             if (NewYahtzee.RollNumber == 3)
@@ -501,10 +504,13 @@ namespace YahtzeeApplication
         {
             MessageBox.Show(diceArray[0].ToString() +" ,"+ diceArray[1].ToString() + " ," + diceArray[2].ToString() + " ," + diceArray[3].ToString() + " ," + diceArray[4].ToString());
             //picDiceBox1.Image = diceImageArray[diceArray[0] - 1];
+            labelDiceBox1.Text = diceArray[0].ToString();
             //picDiceBox2.Image = diceImageArray[diceArray[1] - 1];
             //picDiceBox3.Image = diceImageArray[diceArray[2] - 1];
             //picDiceBox4.Image = diceImageArray[diceArray[3] - 1];
             //picDiceBox5.Image = diceImageArray[diceArray[4] - 1];
+
+
         }
 
         /// <summary>
