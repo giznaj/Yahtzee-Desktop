@@ -712,6 +712,10 @@ namespace YahtzeeApplication
             return GameTipsMessage.ToString();
         }
 
+        /// <summary>
+        /// Sets the values of the diceArray for UNIT TESTING
+        /// </summary>
+        /// <returns></returns>
         public void SetDiceArrayValues(int value1, int value2, int value3, int value4, int value5)
         {
             diceArray[0] = value1;
@@ -719,6 +723,11 @@ namespace YahtzeeApplication
             diceArray[2] = value3;
             diceArray[3] = value4;
             diceArray[4] = value5;
+        }
+
+        public void Close()
+        {
+            this.Close();
         }
         #endregion            
     }

@@ -86,6 +86,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBoxRoll = new System.Windows.Forms.GroupBox();
             this.gUIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSixes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYahtzee)).BeginInit();
@@ -541,7 +542,7 @@
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(6, 220);
+            this.btnNewGame.Location = new System.Drawing.Point(6, 139);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(81, 23);
             this.btnNewGame.TabIndex = 13;
@@ -551,7 +552,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(6, 249);
+            this.button5.Location = new System.Drawing.Point(6, 171);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(81, 23);
             this.button5.TabIndex = 4;
@@ -581,6 +582,7 @@
             // 
             // groupBoxButtons
             // 
+            this.groupBoxButtons.Controls.Add(this.button1);
             this.groupBoxButtons.Controls.Add(this.btnNextTurn);
             this.groupBoxButtons.Controls.Add(this.btnRollDice);
             this.groupBoxButtons.Controls.Add(this.button5);
@@ -694,6 +696,16 @@
             // 
             this.gUIBindingSource.DataSource = typeof(YahtzeeApplication.GameBoard);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 251);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -804,6 +816,7 @@
         private System.Windows.Forms.TextBox textSelectedCategory;
         private System.Windows.Forms.GroupBox groupBox5;
         public System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button button1;
     }
 }
 

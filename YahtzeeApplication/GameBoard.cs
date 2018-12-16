@@ -482,6 +482,14 @@ namespace YahtzeeApplication
             SelectedIndex = 12;
             DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
+
+        /// <summary>
+        /// For closing the application
+        /// </summary>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.CloseApplication();
+        }
         #endregion
 
         #region Public Methods
@@ -731,6 +739,14 @@ namespace YahtzeeApplication
                 MessageBox.Show("Game over!\nYour final score is " + NewYahtzee.RunScore);
                 btnNextTurn.Enabled = false;
             }
+        }
+
+        /// <summary>
+        /// Closes the application
+        /// </summary>
+        public void CloseApplication()
+        {
+            this.Close();
         }
         #endregion
     }
