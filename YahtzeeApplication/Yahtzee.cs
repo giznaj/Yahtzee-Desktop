@@ -20,7 +20,7 @@ using YahtzeeApplication;
 
 namespace YahtzeeApplication
 {
-    internal class Yahtzee
+    public class Yahtzee
     {
         #region Private Members
         private int[] diceArray; // Array of dice
@@ -161,11 +161,19 @@ namespace YahtzeeApplication
         }
 
         /// <summary>
-        /// Gets the diceArray object for the caller
+        /// Gets the diceArray object for the caller (as a string of 5 dice)
         /// </summary>
-        public string DiceArray
+        public string DiceArrayString
         {
             get { return diceArray[0].ToString() + ", " + diceArray[1].ToString() + ", " + diceArray[2].ToString() + ", " + diceArray[3].ToString() + ", " + diceArray[4].ToString(); }
+        }
+
+        /// <summary>
+        /// Gets the diceArray object for the caller (as an array)
+        /// </summary>
+        public int[] DiceArrayArray
+        {
+            get { return diceArray; }
         }
         #endregion
 
@@ -213,13 +221,8 @@ namespace YahtzeeApplication
         /// Method sets the new game values to 0
         /// </summary>
         /// <param name="isNovice">parameter is true is </param>
-        public void NewGame(bool gameTips)
+        public void NewGame()
         {
-            if(gameTips)
-            {
-                GameTips = true; // if box is checked in the GUI, set the mode to Novice (Optional warning messages are displayed)
-            }
-
             // Initialize values to 0
             RollNumber = 0;
             RunBonus = 0;
@@ -695,7 +698,7 @@ namespace YahtzeeApplication
         /// depending on what the parameter is, the message will change.
         /// </summary>
         /// <returns></returns>
-        public string GameMessages(int GameMessageId)    
+        public string GameMessages(int GameMessageId)
         {
             switch (GameMessageId)
             {
@@ -707,6 +710,15 @@ namespace YahtzeeApplication
                     break;
             }
             return GameTipsMessage.ToString();
+        }
+
+        public void SetDiceArrayValues(int value1, int value2, int value3, int value4, int value5)
+        {
+            diceArray[0] = value1;
+            diceArray[1] = value2;
+            diceArray[2] = value3;
+            diceArray[3] = value4;
+            diceArray[4] = value5;
         }
         #endregion            
     }

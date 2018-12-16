@@ -792,7 +792,6 @@
         private System.Windows.Forms.PictureBox pictureBoxTwos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnRollDice;
         private System.Windows.Forms.Button btnNextTurn;
@@ -804,6 +803,7 @@
         private System.Windows.Forms.Button btnSaveScore;
         private System.Windows.Forms.TextBox textSelectedCategory;
         private System.Windows.Forms.GroupBox groupBox5;
+        public System.Windows.Forms.Button btnNewGame;
     }
 }
 
