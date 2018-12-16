@@ -165,7 +165,7 @@ namespace YahtzeeApplication
         /// </summary>
         public string DiceArray
         {
-            get { return " (" + diceArray[0].ToString() + ", " + diceArray[1].ToString() + ", " + diceArray[2].ToString() + ", " + diceArray[3].ToString() + ", " + diceArray[4].ToString() + ")"; }
+            get { return diceArray[0].ToString() + ", " + diceArray[1].ToString() + ", " + diceArray[2].ToString() + ", " + diceArray[3].ToString() + ", " + diceArray[4].ToString(); }
         }
         #endregion
 
@@ -697,17 +697,13 @@ namespace YahtzeeApplication
         /// <returns></returns>
         public string GameMessages(int GameMessageId)    
         {
-            //MessageBox.Show("Roll number: " + RollNumber + "/ MessageIndex: " + TipsMessageId);
             switch (GameMessageId)
             {
                 case 0: // When the user saves their score before rolling the dice at all
                     GameTipsMessage = "You have to roll the dice at least 1 time.\nNot rolling at all and selecting a category will always result in 0 points!";
                     break;
                 case 1: // When the user rolls the dice 1 time
-                    GameTipsMessage = "Rolling 1 time is allowed, but you have 2 more rolls... use them next time!";
-                    break;
-                case 2: // When the user rolls the dice 2 times
-                    GameTipsMessage = "Rolling 2 times is allowed and sometimes you get what you want with only 2\nWhy not use the 3rd?  Maybe a Yahtzee is waiting?";
+                    GameTipsMessage = "You have used this category before!\nPlease select a new category to score or take a zero for!";
                     break;
             }
             return GameTipsMessage.ToString();

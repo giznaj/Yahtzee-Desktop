@@ -138,7 +138,7 @@ namespace YahtzeeApplication
             rollImageArray[2] = Image.FromFile("Images\\rollTwo.PNG");
             rollImageArray[3] = Image.FromFile("Images\\rollThree.PNG");
 
-            // Display friendly name for all categories (the pictureboxes you click for points)
+            // Display friendly name for all categories (the pictureboxes/categories you select for points)
             pictureBoxOnes.Tag = "Ones";
             pictureBoxTwos.Tag = "Twos";
             pictureBoxThrees.Tag = "Threes";
@@ -171,17 +171,6 @@ namespace YahtzeeApplication
             picDiceBox4.Image = diceImageArray[diceArray[3] - 1];
             picDiceBox5.Image = diceImageArray[diceArray[4] - 1];
         }
-
-        /// <summary>
-        /// Disables all category pictureboxes until the next roll.  Stops the user from clicking more than 1 category between rolls
-        /// </summary>
-        //public void DisableAllCategory()
-        //{
-        //    for (int disableCounter = 0; disableCounter < categoryArray.Length; ++disableCounter)
-        //    {
-        //        categoryArray[disableCounter].Enabled = false;
-        //    }
-        //}
 
         /// <summary>
         /// displayes the selected category in the textbox on GUI
@@ -385,11 +374,11 @@ namespace YahtzeeApplication
 
             if(!NewYahtzee.TakeZeroStatus) // Regular round score saved
             {
-                gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
+                gameLogTextBox.AppendText("\nScored: " + NewYahtzee.RollScore + " points.  Category: " + categoryArray[selectedIndex].Tag + ". Dice: " + NewYahtzee.DiceArray);
             }
             else // User took a zero for a category (TakeZeroStatus == true)
             {
-                gameLogTextBox.AppendText("\nZero: " + NewYahtzee.RollScore + " points.  Dice: " + NewYahtzee.DiceArray + ".  Category: " + categoryArray[selectedIndex].Tag);
+                gameLogTextBox.AppendText("\nZero: " + NewYahtzee.RollScore + " points.  Category: " + categoryArray[selectedIndex].Tag + ". Dice: " + NewYahtzee.DiceArray);
             }
 
             if (!NewYahtzee.GameStatus) // Check is game is over
@@ -584,6 +573,11 @@ namespace YahtzeeApplication
                 NewYahtzee.GameMessages(NewYahtzee.RollNumber);
                 MessageBox.Show(NewYahtzee.GameTipsMessage.ToString());
             }
+            else if(categoryArray[SelectedIndex].Image != null) // User has used this category before (either scored or took a zero)
+            {
+                NewYahtzee.GameMessages(1);
+                MessageBox.Show(NewYahtzee.GameTipsMessage.ToString());
+            }
             else // User has rolled at least 1 time
             {
                 SaveScore();
@@ -597,8 +591,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxOnes_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("Ones");
             SelectedIndex = 0;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -608,8 +602,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxTwos_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("Twos");
             SelectedIndex = 1;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -619,8 +613,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxThrees_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("Threes");
-            SelectedIndex = 2; 
+            SelectedIndex = 2;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -630,8 +624,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFours_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("Fours");
             SelectedIndex = 3;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -641,8 +635,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFives_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("Fives");
             SelectedIndex = 4;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -652,8 +646,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxSixes_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("Sixes");
             SelectedIndex = 5;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -663,8 +657,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxThreeKind_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("3 of a kind");
             SelectedIndex = 6;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -674,8 +668,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFourKind_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("4 of a kind");
             SelectedIndex = 7;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -685,8 +679,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFourStraight_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("4 card straight");
             SelectedIndex = 8;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -696,8 +690,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFiveStraight_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("5 card straight");
             SelectedIndex = 9;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -707,8 +701,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxFullHouse_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("full house");
             SelectedIndex = 10;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -718,8 +712,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxChance_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("chance");
             SelectedIndex = 11;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
 
         /// <summary>
@@ -729,8 +723,8 @@ namespace YahtzeeApplication
         /// <param name="e"></param>
         private void pictureBoxYahtzee_Click(object sender, EventArgs e)
         {
-            DisplaySelectedCategory("yahtzee");
             SelectedIndex = 12;
+            DisplaySelectedCategory(categoryArray[SelectedIndex].Tag.ToString());
         }
         #endregion
     }
