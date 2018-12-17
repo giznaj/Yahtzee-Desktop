@@ -152,6 +152,8 @@ namespace YahtzeeApplication
             pictureBoxFullHouse.Tag = "Full House";
             pictureBoxChance.Tag = "Chance";
             pictureBoxYahtzee.Tag = "Yahtzee";
+
+            labelRollNumber.ForeColor = Color.Green;
         }
         #endregion
 
@@ -227,7 +229,14 @@ namespace YahtzeeApplication
                 }
             }
 
-            // Calls the rollEffect(rollOrHoldArray) in Yahtzze.cs - CREATES ROLLING EFFECT - 
+            for (int effectCounter = 0; effectCounter < 7; ++effectCounter)
+            {
+                DisplayRoll(NewYahtzee.RollEffect(rollOrHoldArray));
+                Application.DoEvents();
+                Thread.Sleep(85);
+            }
+
+            // Calls the RollEffect(rollOrHoldArray) method in Yahtzze.cs - CREATES ROLLING EFFECT - 
             //for (int effectCounter = 0; effectCounter < 7; ++effectCounter)
             //{
             //    DisplayRoll(NewYahtzee.RollEffect(rollOrHoldArray));
@@ -240,7 +249,8 @@ namespace YahtzeeApplication
 
             // Display the roll number. 
             //pictureBoxRolls.Image = rollImageArray[NewYahtzee.RollNumber];
-            labelRollNumber.Text = NewYahtzee.RollNumber.ToString(); ;
+            //labelRollNumber.ForeColor = System.Drawing.Color.Red;
+            labelRollNumber.Text = NewYahtzee.RollNumber.ToString();
 
             // Check to see if user has rolled the dice 3 times.  If so, disable to the roll button
             if (NewYahtzee.RollNumber == 3)

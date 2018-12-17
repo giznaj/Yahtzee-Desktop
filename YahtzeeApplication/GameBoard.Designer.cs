@@ -494,7 +494,7 @@
             this.labelDiceBox5.Name = "labelDiceBox5";
             this.labelDiceBox5.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox5.TabIndex = 65;
-            this.labelDiceBox5.Text = "5";
+            this.labelDiceBox5.Text = "?";
             // 
             // labelDiceBox4
             // 
@@ -509,7 +509,7 @@
             this.labelDiceBox4.Name = "labelDiceBox4";
             this.labelDiceBox4.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox4.TabIndex = 64;
-            this.labelDiceBox4.Text = "4";
+            this.labelDiceBox4.Text = "?";
             // 
             // labelDiceBox3
             // 
@@ -524,7 +524,7 @@
             this.labelDiceBox3.Name = "labelDiceBox3";
             this.labelDiceBox3.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox3.TabIndex = 63;
-            this.labelDiceBox3.Text = "3";
+            this.labelDiceBox3.Text = "?";
             // 
             // labelDiceBox2
             // 
@@ -539,7 +539,7 @@
             this.labelDiceBox2.Name = "labelDiceBox2";
             this.labelDiceBox2.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox2.TabIndex = 62;
-            this.labelDiceBox2.Text = "2";
+            this.labelDiceBox2.Text = "?";
             // 
             // labelDiceBox1
             // 
@@ -554,7 +554,7 @@
             this.labelDiceBox1.Name = "labelDiceBox1";
             this.labelDiceBox1.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox1.TabIndex = 61;
-            this.labelDiceBox1.Text = "1";
+            this.labelDiceBox1.Text = "?";
             // 
             // btnNewGame
             // 
@@ -724,9 +724,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRollNumber.AutoSize = true;
-            this.labelRollNumber.BackColor = System.Drawing.Color.White;
+            this.labelRollNumber.BackColor = System.Drawing.Color.LightGray;
             this.labelRollNumber.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelRollNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 51.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRollNumber.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelRollNumber.Location = new System.Drawing.Point(13, 18);
             this.labelRollNumber.Name = "labelRollNumber";
             this.labelRollNumber.Size = new System.Drawing.Size(2, 81);

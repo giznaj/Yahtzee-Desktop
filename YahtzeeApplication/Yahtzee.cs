@@ -300,7 +300,6 @@ namespace YahtzeeApplication
             {
                 diceArray[4] = randomNumbers.Next(1, 7); // Dice #5
             }
-
             return diceArray;
         }
 
