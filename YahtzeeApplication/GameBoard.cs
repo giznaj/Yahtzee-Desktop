@@ -114,11 +114,11 @@ namespace YahtzeeApplication
             checkBoxArray[4] = checkBox5;
 
             // Array of dice PictureBoxes.  Not the array of pictures that populate the picturebox, the picturebox itself (element)
-            pictureBoxArray[0] = picDiceBox1;
-            pictureBoxArray[1] = picDiceBox2;
-            pictureBoxArray[2] = picDiceBox3;
-            pictureBoxArray[3] = picDiceBox4;
-            pictureBoxArray[4] = picDiceBox5;
+            //pictureBoxArray[0] = picDiceBox1;
+            //pictureBoxArray[1] = picDiceBox2;
+            //pictureBoxArray[2] = picDiceBox3;
+            //pictureBoxArray[3] = picDiceBox4;
+            //pictureBoxArray[4] = picDiceBox5;
 
             // Array of dice images themselves that populate the PictureBox array
             //diceImageArray[0] = Image.FromFile("Images\\1.dice.GIF");
@@ -281,7 +281,7 @@ namespace YahtzeeApplication
                 // Set rollScore back to 0
                 NewYahtzee.RollScore = 0;
                 // Display the 0 in the roll box.  Roll number box shows the number of rolls used
-                //pictureBoxRolls.Image = rollImageArray[0];
+                labelRollNumber.Text = NewYahtzee.RollNumber.ToString();
                 // Enable the 'roll' button again
                 btnRollDice.Enabled = true;
                 // Enable the 'save' button again
@@ -502,15 +502,18 @@ namespace YahtzeeApplication
         /// <param name="diceArray"></param>
         private void DisplayRoll(int[] diceArray)
         {
-            MessageBox.Show(diceArray[0].ToString() +" ,"+ diceArray[1].ToString() + " ," + diceArray[2].ToString() + " ," + diceArray[3].ToString() + " ," + diceArray[4].ToString());
+            //MessageBox.Show(diceArray[0].ToString() +" ,"+ diceArray[1].ToString() + " ," + diceArray[2].ToString() + " ," + diceArray[3].ToString() + " ," + diceArray[4].ToString());
             //picDiceBox1.Image = diceImageArray[diceArray[0] - 1];
-            labelDiceBox1.Text = diceArray[0].ToString();
             //picDiceBox2.Image = diceImageArray[diceArray[1] - 1];
             //picDiceBox3.Image = diceImageArray[diceArray[2] - 1];
             //picDiceBox4.Image = diceImageArray[diceArray[3] - 1];
             //picDiceBox5.Image = diceImageArray[diceArray[4] - 1];
 
-
+            labelDiceBox1.Text = diceArray[0].ToString();
+            labelDiceBox2.Text = diceArray[1].ToString();
+            labelDiceBox3.Text = diceArray[2].ToString();
+            labelDiceBox4.Text = diceArray[3].ToString();
+            labelDiceBox5.Text = diceArray[4].ToString();
         }
 
         /// <summary>

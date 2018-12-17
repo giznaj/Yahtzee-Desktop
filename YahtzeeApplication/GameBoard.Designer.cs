@@ -64,15 +64,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.picDiceBox1 = new System.Windows.Forms.PictureBox();
-            this.picDiceBox2 = new System.Windows.Forms.PictureBox();
-            this.picDiceBox3 = new System.Windows.Forms.PictureBox();
-            this.picDiceBox4 = new System.Windows.Forms.PictureBox();
-            this.picDiceBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxRolls = new System.Windows.Forms.PictureBox();
             this.pictureBoxTwos = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelDiceBox5 = new System.Windows.Forms.Label();
+            this.labelDiceBox4 = new System.Windows.Forms.Label();
+            this.labelDiceBox3 = new System.Windows.Forms.Label();
+            this.labelDiceBox2 = new System.Windows.Forms.Label();
             this.labelDiceBox1 = new System.Windows.Forms.Label();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -101,12 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFives)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxThrees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRolls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTwos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,6 +112,7 @@
             // 
             // gameLogTextBox
             // 
+            this.gameLogTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gameLogTextBox.Location = new System.Drawing.Point(20, 23);
             this.gameLogTextBox.Name = "gameLogTextBox";
             this.gameLogTextBox.ReadOnly = true;
@@ -449,60 +442,6 @@
             this.label16.TabIndex = 55;
             this.label16.Text = "Yahtzee";
             // 
-            // picDiceBox1
-            // 
-            this.picDiceBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picDiceBox1.Location = new System.Drawing.Point(360, 19);
-            this.picDiceBox1.Name = "picDiceBox1";
-            this.picDiceBox1.Size = new System.Drawing.Size(23, 40);
-            this.picDiceBox1.TabIndex = 56;
-            this.picDiceBox1.TabStop = false;
-            // 
-            // picDiceBox2
-            // 
-            this.picDiceBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picDiceBox2.Location = new System.Drawing.Point(107, 27);
-            this.picDiceBox2.Name = "picDiceBox2";
-            this.picDiceBox2.Size = new System.Drawing.Size(55, 55);
-            this.picDiceBox2.TabIndex = 57;
-            this.picDiceBox2.TabStop = false;
-            // 
-            // picDiceBox3
-            // 
-            this.picDiceBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picDiceBox3.Location = new System.Drawing.Point(195, 27);
-            this.picDiceBox3.Name = "picDiceBox3";
-            this.picDiceBox3.Size = new System.Drawing.Size(55, 55);
-            this.picDiceBox3.TabIndex = 58;
-            this.picDiceBox3.TabStop = false;
-            // 
-            // picDiceBox4
-            // 
-            this.picDiceBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picDiceBox4.Location = new System.Drawing.Point(284, 27);
-            this.picDiceBox4.Name = "picDiceBox4";
-            this.picDiceBox4.Size = new System.Drawing.Size(55, 55);
-            this.picDiceBox4.TabIndex = 59;
-            this.picDiceBox4.TabStop = false;
-            // 
-            // picDiceBox5
-            // 
-            this.picDiceBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picDiceBox5.Location = new System.Drawing.Point(370, 27);
-            this.picDiceBox5.Name = "picDiceBox5";
-            this.picDiceBox5.Size = new System.Drawing.Size(55, 55);
-            this.picDiceBox5.TabIndex = 60;
-            this.picDiceBox5.TabStop = false;
-            // 
-            // pictureBoxRolls
-            // 
-            this.pictureBoxRolls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxRolls.Location = new System.Drawing.Point(332, 19);
-            this.pictureBoxRolls.Name = "pictureBoxRolls";
-            this.pictureBoxRolls.Size = new System.Drawing.Size(22, 40);
-            this.pictureBoxRolls.TabIndex = 61;
-            this.pictureBoxRolls.TabStop = false;
-            // 
             // pictureBoxTwos
             // 
             this.pictureBoxTwos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -525,16 +464,16 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.labelDiceBox5);
+            this.groupBox2.Controls.Add(this.labelDiceBox4);
+            this.groupBox2.Controls.Add(this.labelDiceBox3);
+            this.groupBox2.Controls.Add(this.labelDiceBox2);
             this.groupBox2.Controls.Add(this.labelDiceBox1);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox3);
             this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.picDiceBox5);
             this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.picDiceBox4);
-            this.groupBox2.Controls.Add(this.picDiceBox2);
-            this.groupBox2.Controls.Add(this.picDiceBox3);
             this.groupBox2.Location = new System.Drawing.Point(112, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(446, 115);
@@ -542,14 +481,80 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dice";
             // 
+            // labelDiceBox5
+            // 
+            this.labelDiceBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDiceBox5.AutoSize = true;
+            this.labelDiceBox5.BackColor = System.Drawing.Color.White;
+            this.labelDiceBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDiceBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiceBox5.Location = new System.Drawing.Point(370, 22);
+            this.labelDiceBox5.Name = "labelDiceBox5";
+            this.labelDiceBox5.Size = new System.Drawing.Size(53, 57);
+            this.labelDiceBox5.TabIndex = 65;
+            this.labelDiceBox5.Text = "5";
+            // 
+            // labelDiceBox4
+            // 
+            this.labelDiceBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDiceBox4.AutoSize = true;
+            this.labelDiceBox4.BackColor = System.Drawing.Color.White;
+            this.labelDiceBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDiceBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiceBox4.Location = new System.Drawing.Point(284, 22);
+            this.labelDiceBox4.Name = "labelDiceBox4";
+            this.labelDiceBox4.Size = new System.Drawing.Size(53, 57);
+            this.labelDiceBox4.TabIndex = 64;
+            this.labelDiceBox4.Text = "4";
+            // 
+            // labelDiceBox3
+            // 
+            this.labelDiceBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDiceBox3.AutoSize = true;
+            this.labelDiceBox3.BackColor = System.Drawing.Color.White;
+            this.labelDiceBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDiceBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiceBox3.Location = new System.Drawing.Point(195, 22);
+            this.labelDiceBox3.Name = "labelDiceBox3";
+            this.labelDiceBox3.Size = new System.Drawing.Size(53, 57);
+            this.labelDiceBox3.TabIndex = 63;
+            this.labelDiceBox3.Text = "3";
+            // 
+            // labelDiceBox2
+            // 
+            this.labelDiceBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDiceBox2.AutoSize = true;
+            this.labelDiceBox2.BackColor = System.Drawing.Color.White;
+            this.labelDiceBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDiceBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiceBox2.Location = new System.Drawing.Point(107, 22);
+            this.labelDiceBox2.Name = "labelDiceBox2";
+            this.labelDiceBox2.Size = new System.Drawing.Size(53, 57);
+            this.labelDiceBox2.TabIndex = 62;
+            this.labelDiceBox2.Text = "2";
+            // 
             // labelDiceBox1
             // 
+            this.labelDiceBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDiceBox1.AutoSize = true;
-            this.labelDiceBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiceBox1.Location = new System.Drawing.Point(29, 31);
+            this.labelDiceBox1.BackColor = System.Drawing.Color.White;
+            this.labelDiceBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDiceBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiceBox1.Location = new System.Drawing.Point(20, 22);
             this.labelDiceBox1.Name = "labelDiceBox1";
-            this.labelDiceBox1.Size = new System.Drawing.Size(0, 42);
+            this.labelDiceBox1.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox1.TabIndex = 61;
+            this.labelDiceBox1.Text = "1";
             // 
             // btnNewGame
             // 
@@ -692,8 +697,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.picDiceBox1);
-            this.groupBox4.Controls.Add(this.pictureBoxRolls);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.textRunScore);
             this.groupBox4.Controls.Add(this.label1);
@@ -717,11 +720,16 @@
             // 
             // labelRollNumber
             // 
+            this.labelRollNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRollNumber.AutoSize = true;
-            this.labelRollNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRollNumber.Location = new System.Drawing.Point(13, 27);
+            this.labelRollNumber.BackColor = System.Drawing.Color.White;
+            this.labelRollNumber.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRollNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 51.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRollNumber.Location = new System.Drawing.Point(13, 18);
             this.labelRollNumber.Name = "labelRollNumber";
-            this.labelRollNumber.Size = new System.Drawing.Size(0, 76);
+            this.labelRollNumber.Size = new System.Drawing.Size(2, 81);
             this.labelRollNumber.TabIndex = 0;
             // 
             // gUIBindingSource
@@ -756,12 +764,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFives)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxThrees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiceBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRolls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTwos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -818,12 +820,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.BindingSource gUIBindingSource;
-        private System.Windows.Forms.PictureBox picDiceBox1;
-        private System.Windows.Forms.PictureBox picDiceBox2;
-        private System.Windows.Forms.PictureBox picDiceBox3;
-        private System.Windows.Forms.PictureBox picDiceBox4;
-        private System.Windows.Forms.PictureBox picDiceBox5;
-        private System.Windows.Forms.PictureBox pictureBoxRolls;
         private System.Windows.Forms.PictureBox pictureBoxTwos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -842,6 +838,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelRollNumber;
         public System.Windows.Forms.Label labelDiceBox1;
+        public System.Windows.Forms.Label labelDiceBox5;
+        public System.Windows.Forms.Label labelDiceBox4;
+        public System.Windows.Forms.Label labelDiceBox3;
+        public System.Windows.Forms.Label labelDiceBox2;
     }
 }
 
