@@ -147,8 +147,8 @@ namespace YahtzeeApplication
             pictureBoxSixes.Tag = "Sixes";
             pictureBoxThreeKind.Tag = "Three of a kind";
             pictureBoxFourKind.Tag = "Four of a kind";
-            pictureBoxFourStraight.Tag = "Small straight";
-            pictureBoxFiveStraight.Tag = "Large straight";
+            pictureBoxFourStraight.Tag = "Four card straight";
+            pictureBoxFiveStraight.Tag = "Five card straight";
             pictureBoxFullHouse.Tag = "Full House";
             pictureBoxChance.Tag = "Chance";
             pictureBoxYahtzee.Tag = "Yahtzee";
