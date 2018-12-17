@@ -313,6 +313,9 @@ namespace YahtzeeApplication
                     checkBoxTakeZero.Checked = false;
                 }
 
+                // Enable and uncheck the dice checkboxes
+                Utilities.ToggleAllDiceCheckBox(this, 1);
+
                 //// Enable all of the category pictureboxes that are null (so they can be selected for next round of scoring)
                 //for (int enableCounter = 0; enableCounter < categoryArray.Length; ++enableCounter)
                 //{
@@ -342,12 +345,16 @@ namespace YahtzeeApplication
                 NewYahtzee.GameMessages(NewYahtzee.RollNumber);
                 MessageBox.Show(NewYahtzee.GameTipsMessage.ToString());
             }
-            else if(categoryArray[SelectedIndex].Image != null) // User has used this category before (either scored or took a zero)
+            else if (textSelectedCategory.Text.Length == 0) // User has rolled at least once.  User has not selected a category
+            {
+                MessageBox.Show("You must select a category first!\nThen either take a 0, or your score!");
+            }
+            else if(categoryArray[SelectedIndex].Image != null) // User has rolled at least once.  User has selected a category.  User has used this category before
             {
                 NewYahtzee.GameMessages(1);
                 MessageBox.Show(NewYahtzee.GameTipsMessage.ToString());
             }
-            else // User has rolled at least 1 time
+            else // User has met save requirements (DOES NOT MEAN THE SAVE WILL BE SUCCESUL)
             {
                 SaveScore();
             }
@@ -503,6 +510,81 @@ namespace YahtzeeApplication
         {
             this.CloseApplication();
         }
+
+        /// <summary>
+        /// Toggle corresponding checkbox
+        /// </summary>
+        private void labelDiceBox1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                checkBox1.Checked = false;
+            }
+            else if (!checkBox1.Checked)
+            {
+                checkBox1.Checked = true;
+            }
+        }
+
+        /// <summary>
+        /// Toggle corresponding checkbox
+        /// </summary>
+        private void labelDiceBox2_Click(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox2.Checked = false;
+            }
+            else if (!checkBox2.Checked)
+            {
+                checkBox2.Checked = true;
+            }
+        }
+
+        /// <summary>
+        /// Toggle corresponding checkbox
+        /// </summary>
+        private void labelDiceBox3_Click(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                checkBox3.Checked = false;
+            }
+            else if (!checkBox3.Checked)
+            {
+                checkBox3.Checked = true;
+            }
+        }
+
+        /// <summary>
+        /// Toggle corresponding checkbox
+        /// </summary>
+        private void labelDiceBox4_Click(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+            {
+                checkBox4.Checked = false;
+            }
+            else if (!checkBox4.Checked)
+            {
+                checkBox4.Checked = true;
+            }
+        }
+
+        /// <summary>
+        /// Toggle corresponding checkbox
+        /// </summary>
+        private void labelDiceBox5_Click(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked)
+            {
+                checkBox5.Checked = false;
+            }
+            else if (!checkBox5.Checked)
+            {
+                checkBox5.Checked = true;
+            }
+        }
         #endregion
 
         #region Public Methods
@@ -539,11 +621,11 @@ namespace YahtzeeApplication
         /// </summary>
         public void SaveScore()
         {
-            if (textSelectedCategory.Text.Length == 0) // User has not selected a category
-            {
-                MessageBox.Show("You must select a category first!\nThen either take a 0, or your score!");
-            }
-            else if (checkBoxTakeZero.Checked) // User wishes to take a zero for the selected category
+            //if (textSelectedCategory.Text.Length == 0) // User has not selected a category
+            //{
+            //    MessageBox.Show("You must select a category first!\nThen either take a 0, or your score!");
+            //}
+            if (checkBoxTakeZero.Checked) // User wishes to take a zero for the selected category
             {
                 if (NewYahtzee.TakeZero(SelectedIndex))
                 {
@@ -556,7 +638,7 @@ namespace YahtzeeApplication
                     MessageBox.Show("Take Zero failed");
                 }
             }
-            else
+            else // User wishes to save some points for the selected category
             {
                 switch (selectedIndex) // Index = the category attempting to either take a 0 or points for
                 {
@@ -720,11 +802,20 @@ namespace YahtzeeApplication
                         break;
                 }
 
-                // If the 'Save Score' was successful, Disable the 'Save Score' and 'Roll' buttons.  Clicking 'Next Turn' will enable them
+                // If the 'Save Score' was successful, Disable some controls to ensure game integrity.  The next turn button will enable them again
                 if (NewYahtzee.SaveStatus)
                 {
+                    // To stop the user from saving again (more points)
+                    // To stop the user from rolling more (then saving again and possible more points)
                     btnSaveScore.Enabled = false;
                     btnRollDice.Enabled = false;
+
+                    // Uncheck and disable the dice checkboxes.  This will stop the same points for being saved for the next turn
+                    checkBox1.Checked = false; checkBox1.Enabled = false;
+                    checkBox2.Checked = false; checkBox2.Enabled = false;
+                    checkBox3.Checked = false; checkBox3.Enabled = false;
+                    checkBox4.Checked = false; checkBox4.Enabled = false;
+                    checkBox5.Checked = false; checkBox5.Enabled = false;
                 }
 
                 // Update the GUI with the scores and the log window

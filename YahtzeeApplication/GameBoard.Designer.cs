@@ -77,7 +77,7 @@
             this.btnRollDice = new System.Windows.Forms.Button();
             this.btnNextTurn = new System.Windows.Forms.Button();
             this.groupBoxButtons = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textSelectedCategory = new System.Windows.Forms.TextBox();
@@ -495,6 +495,7 @@
             this.labelDiceBox5.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox5.TabIndex = 65;
             this.labelDiceBox5.Text = "?";
+            this.labelDiceBox5.Click += new System.EventHandler(this.labelDiceBox5_Click);
             // 
             // labelDiceBox4
             // 
@@ -510,6 +511,7 @@
             this.labelDiceBox4.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox4.TabIndex = 64;
             this.labelDiceBox4.Text = "?";
+            this.labelDiceBox4.Click += new System.EventHandler(this.labelDiceBox4_Click);
             // 
             // labelDiceBox3
             // 
@@ -525,6 +527,7 @@
             this.labelDiceBox3.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox3.TabIndex = 63;
             this.labelDiceBox3.Text = "?";
+            this.labelDiceBox3.Click += new System.EventHandler(this.labelDiceBox3_Click);
             // 
             // labelDiceBox2
             // 
@@ -540,6 +543,7 @@
             this.labelDiceBox2.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox2.TabIndex = 62;
             this.labelDiceBox2.Text = "?";
+            this.labelDiceBox2.Click += new System.EventHandler(this.labelDiceBox2_Click);
             // 
             // labelDiceBox1
             // 
@@ -555,6 +559,7 @@
             this.labelDiceBox1.Size = new System.Drawing.Size(53, 57);
             this.labelDiceBox1.TabIndex = 61;
             this.labelDiceBox1.Text = "?";
+            this.labelDiceBox1.Click += new System.EventHandler(this.labelDiceBox1_Click);
             // 
             // btnNewGame
             // 
@@ -598,7 +603,7 @@
             // 
             // groupBoxButtons
             // 
-            this.groupBoxButtons.Controls.Add(this.button1);
+            this.groupBoxButtons.Controls.Add(this.buttonExit);
             this.groupBoxButtons.Controls.Add(this.btnNextTurn);
             this.groupBoxButtons.Controls.Add(this.btnRollDice);
             this.groupBoxButtons.Controls.Add(this.button5);
@@ -610,15 +615,15 @@
             this.groupBoxButtons.TabStop = false;
             this.groupBoxButtons.Text = "Actions";
             // 
-            // button1
+            // buttonExit
             // 
-            this.button1.Location = new System.Drawing.Point(7, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonExit.Location = new System.Drawing.Point(7, 251);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(80, 23);
+            this.buttonExit.TabIndex = 14;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox3
             // 
@@ -653,7 +658,7 @@
             this.groupBox3.Size = new System.Drawing.Size(297, 315);
             this.groupBox3.TabIndex = 68;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Scoreboard";
+            this.groupBox3.Text = "Categories";
             // 
             // groupBox5
             // 
@@ -665,7 +670,7 @@
             this.groupBox5.Size = new System.Drawing.Size(297, 80);
             this.groupBox5.TabIndex = 66;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Score Entering";
+            this.groupBox5.Text = "Scoring";
             // 
             // textSelectedCategory
             // 
@@ -836,7 +841,7 @@
         private System.Windows.Forms.TextBox textSelectedCategory;
         private System.Windows.Forms.GroupBox groupBox5;
         public System.Windows.Forms.Button btnNewGame;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label labelRollNumber;
         public System.Windows.Forms.Label labelDiceBox1;
         public System.Windows.Forms.Label labelDiceBox5;

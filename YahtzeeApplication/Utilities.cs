@@ -93,5 +93,33 @@ namespace YahtzeeApplication
                 }
             }
         }
+
+        public static void ToggleAllDiceCheckBox(Control form, int toggle)
+        {
+            // Uncheck and disable the dice checkboxes.  This will stop the same points for being saved for the next turn
+            foreach (Control parentControl in form.Controls)
+            {
+                if (parentControl is GroupBox) // Goes inside the outter groupbox
+                {
+                    foreach (Control childControl in parentControl.Controls)
+                    {
+                        if (childControl is CheckBox)  // Disable and keep status
+                        {
+                            if(toggle == 0)
+                            {
+                                CheckBox checkBox = (CheckBox)childControl;
+                                checkBox.Enabled = false;
+                            }
+                            else if(toggle ==1) // Enable and uncheck
+                            {
+                                CheckBox checkBox = (CheckBox)childControl;
+                                checkBox.Checked = false;
+                                checkBox.Enabled = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
