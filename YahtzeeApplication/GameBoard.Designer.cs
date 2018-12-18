@@ -677,12 +677,12 @@
             this.textSelectedCategory.Enabled = false;
             this.textSelectedCategory.Location = new System.Drawing.Point(102, 36);
             this.textSelectedCategory.Name = "textSelectedCategory";
-            this.textSelectedCategory.Size = new System.Drawing.Size(86, 20);
+            this.textSelectedCategory.Size = new System.Drawing.Size(97, 20);
             this.textSelectedCategory.TabIndex = 64;
             // 
             // btnSaveScore
             // 
-            this.btnSaveScore.Location = new System.Drawing.Point(194, 34);
+            this.btnSaveScore.Location = new System.Drawing.Point(205, 34);
             this.btnSaveScore.Name = "btnSaveScore";
             this.btnSaveScore.Size = new System.Drawing.Size(75, 23);
             this.btnSaveScore.TabIndex = 65;

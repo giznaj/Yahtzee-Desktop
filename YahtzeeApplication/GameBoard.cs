@@ -186,7 +186,9 @@ namespace YahtzeeApplication
                     textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
                     // Clear score entering selected category (should be handled in utilities in future - code is there, just not working)
                     textSelectedCategory.Text = null;
-                    }
+
+                    gameLogTextBox.AppendText("Let's get ready to ROLL!  Good luck!");
+                }
             }
 
             else // Enter here if there is no game in progress
@@ -202,6 +204,8 @@ namespace YahtzeeApplication
                 textRunBonus.Text = Convert.ToString(NewYahtzee.RunBonus);
                 // Show the running score for the game
                 textRunScore.Text = Convert.ToString(NewYahtzee.RunScore);
+
+                gameLogTextBox.AppendText("Let's get ready to ROLL!  Good luck!");
             }
         }
 
