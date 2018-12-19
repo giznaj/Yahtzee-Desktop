@@ -10,7 +10,7 @@ namespace UnitTestProject
     [TestFixture]
     public class GameBoardLogicTests
     {
-        //Yahtzee target;
+        public Yahtzee target;
 
         #region Setup TearDown
         //Use to run code before each test
@@ -24,195 +24,355 @@ namespace UnitTestProject
         [TearDown]
         public void MyTestCleanup()
         {
-            //target.Close();
+            //todo
         }
         #endregion
 
         #region Tests
-        [Test, Order(1)]
-        public void SaveOnesTests()
+        [Test]
+        public void SaveOnes1Dice()
         {
             //Arrange
-            Yahtzee target = new Yahtzee();
+            //Yahtzee target = new Yahtzee();
+            target = new Yahtzee();
 
             //Act
-            target.SetDiceArrayValues(1, 2, 3, 4, 5);
+            target.SetDiceArrayValues(3, 2, 1, 4, 5);
+            bool pass = target.SaveOnes();
             //Assert
-            Assert.True(target.SaveOnes());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveOnes5Dice()
+        {
+            //Arrange
+            //Yahtzee target = new Yahtzee();
+            target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(1, 1, 1, 1, 1);
+            bool pass = target.SaveOnes();
             //Assert
-            Assert.True(target.SaveOnes());
-
-            //Act
-            target.SetDiceArrayValues(3, 5, 6, 6, 1);
-            //Assert
-            Assert.True(target.SaveOnes());
-
-            //target.Close();
+            Assert.True(pass);
         }
 
-        [Test, Order(2)]
-        public void SaveTwosTests()
+        [Test]
+        public void SaveOnes0Dice()
+        {
+            //Arrange
+            //Yahtzee target = new Yahtzee();
+            target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(2, 3, 3, 6, 4);
+            bool pass = target.SaveOnes();
+            //Assert
+            Assert.False(pass);
+        }
+
+        [Test]
+        public void SaveTwos1Dice()
         {
             //Arrange
             Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(2, 4, 3, 4, 5);
+            bool pass = target.SaveTwos();
             //Assert
-            Assert.True(target.SaveTwos());
+            Assert.True(pass);
+        }
 
+        [Test]
+        public void SaveTwos5Dice()
+        {
             //Act
             target.SetDiceArrayValues(2, 2, 2, 2, 2);
+            bool pass = target.SaveTwos(); 
             //Assert
-            Assert.True(target.SaveTwos());
-
-            //Act
-            target.SetDiceArrayValues(3, 5, 6, 6, 2);
-            //Assert
-            Assert.True(target.SaveTwos());
-
-            //target.Close();
+            Assert.True(pass);
         }
 
-        [Test, Order(3)]
-        public void SaveThreesTests()
+        [Test]
+        public void SaveTwos0Dice()
+        {
+            //Arrange
+            //Yahtzee target = new Yahtzee();
+            target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(1, 3, 3, 6, 4);
+            bool pass = target.SaveTwos();
+            //Assert
+            Assert.False(pass);
+        }
+
+        [Test]
+        public void SaveThrees1Dice()
         {
             //Arrange
             Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(2, 4, 3, 4, 5);
+            bool pass = target.SaveThrees();
             //Assert
-            Assert.True(target.SaveThrees());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveThrees5Dice()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(3, 3, 3, 3, 3);
+            bool pass = target.SaveThrees();
             //Assert
-            Assert.True(target.SaveThrees());
-
-            //Act
-            target.SetDiceArrayValues(3, 5, 6, 6, 2);
-            //Assert
-            Assert.True(target.SaveThrees());
-
-            //target.Close();
+            Assert.True(pass);
         }
 
-        [Test, Order(4)]
-        public void SaveFoursTests()
+        [Test]
+        public void SaveThrees0Dice()
+        {
+            //Arrange
+            //Yahtzee target = new Yahtzee();
+            target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(2, 1, 1, 6, 4);
+            bool pass = target.SaveThrees();
+            //Assert
+            Assert.False(pass);
+        }
+
+        [Test]
+        public void SaveFours1Dice()
         {
             //Arrange
             Yahtzee target = new Yahtzee();
 
             //Act
-            target.SetDiceArrayValues(2, 4, 3, 4, 5);
+            target.SetDiceArrayValues(2, 1, 3, 4, 5);
+            bool pass = target.SaveFours();
             //Assert
-            Assert.True(target.SaveFours());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveFours5Dice()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(4, 4, 4, 4, 4);
+            bool pass = target.SaveFours();
             //Assert
-            Assert.True(target.SaveFours());
-
-            //Act
-            target.SetDiceArrayValues(3, 5, 6, 4, 2);
-            //Assert
-            Assert.True(target.SaveFours());
-
-            //target.Close();
+            Assert.True(pass);
         }
 
-        [Test, Order(5)]
-        public void SaveFivesTests()
+        [Test]
+        public void SaveFours0Dice()
+        {
+            //Arrange
+            //Yahtzee target = new Yahtzee();
+            target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(2, 3, 3, 6, 1);
+            bool pass = target.SaveFours();
+            //Assert
+            Assert.False(pass);
+        }
+
+        [Test]
+        public void SaveFives1Dice()
         {
             //Arrange
             Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(2, 4, 3, 4, 5);
+            bool pass = target.SaveFives();
             //Assert
-            Assert.True(target.SaveFives());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveFives5Dice()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(5, 5, 5, 5, 5);
+            bool pass = target.SaveFives();
             //Assert
-            Assert.True(target.SaveFives());
-
-            //Act
-            target.SetDiceArrayValues(3, 5, 6, 4, 2);
-            //Assert
-            Assert.True(target.SaveFives());
-
-            //target.Close();
+            Assert.True(pass);
         }
 
-        [Test, Order(6)]
-        public void SaveSixesTests()
+        [Test]
+        public void SaveFives0Dice()
+        {
+            //Arrange
+            //Yahtzee target = new Yahtzee();
+            target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(2, 3, 3, 6, 4);
+            bool pass = target.SaveFives();
+            //Assert
+            Assert.False(pass);
+        }
+
+        [Test]
+        public void SaveSixes1Dice()
         {
             //Arrange
             Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(2, 4, 3, 4, 6);
+            bool pass = target.SaveSixes();
             //Assert
-            Assert.True(target.SaveSixes());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveSixes5Dice()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(6, 6, 6, 6, 6);
+            bool pass = target.SaveSixes();
             //Assert
-            Assert.True(target.SaveSixes());
-
-            //Act
-            target.SetDiceArrayValues(3, 5, 6, 4, 2);
-            //Assert
-            Assert.True(target.SaveSixes());
-
-            //target.Close();
+            Assert.True(pass);
         }
 
-        [Test, Order(7)]
-        public void SaveYahtzeeTests()
+        [Test]
+        public void SaveSixes0Dice()
+        {
+            //Arrange
+            //Yahtzee target = new Yahtzee();
+            target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(2, 3, 3, 1, 4);
+            bool pass = target.SaveSixes();
+            //Assert
+            Assert.False(pass);
+        }
+
+        [Test]
+        public void SaveYahtzeeOnes()
         {
             //Arrange
             Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(1, 1, 1, 1, 1);
+            bool pass = target.SaveYahtzee();
             //Assert
-            Assert.True(target.SaveYahtzee());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveYahtzeeTwos()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(2, 2, 2, 2, 2);
+            bool pass = target.SaveYahtzee();
             //Assert
-            Assert.True(target.SaveYahtzee());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveYahtzeeThrees()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(3, 3, 3, 3, 3);
+            bool pass = target.SaveYahtzee();
             //Assert
-            Assert.True(target.SaveYahtzee());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveYahtzeeFours()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(4, 4, 4, 4, 4);
+            bool pass = target.SaveYahtzee();
             //Assert
-            Assert.True(target.SaveYahtzee());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveYahtzeeFives()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(5, 5, 5, 5, 5);
+            bool pass = target.SaveYahtzee();
             //Assert
-            Assert.True(target.SaveYahtzee());
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveYahtzeeSixes()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
 
             //Act
             target.SetDiceArrayValues(6, 6, 6, 6, 6);
+            bool pass = target.SaveYahtzee();
             //Assert
-            Assert.True(target.SaveYahtzee());
-
-            //target.Close();
+            Assert.True(pass);
         }
 
-        [Test, Order(8)]
+        [Test]
+        public void SaveYahtzee0Dice()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(1, 4, 6, 3, 5);
+            bool pass = target.SaveYahtzee();
+            //Assert
+            Assert.IsFalse(pass);
+        }
+
+        [Test]
+        public void SaveYahtzee4Dice()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(6, 6, 6, 6, 5);
+            bool pass = target.SaveYahtzee();
+            //Assert
+            Assert.IsFalse(pass);
+        }
+
+        [Test]
         public void RollScoreTests()
         {
             //Arrange
