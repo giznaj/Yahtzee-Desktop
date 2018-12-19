@@ -8,7 +8,7 @@ namespace UnitTestProject
     ///to contain all GameBoardTest Unit Tests
     ///</summary>
     [TestFixture]
-    public class GameBoardLogicTests
+    public class YahtzeeLogicTests
     {
         public Yahtzee target;
 
@@ -373,22 +373,42 @@ namespace UnitTestProject
         }
 
         [Test]
-        public void RollScoreTests()
+        public void SaveThreeKind1()
         {
             //Arrange
             Yahtzee target = new Yahtzee();
 
             //Act
-            target.SetDiceArrayValues(1, 2, 3, 4, 5);
-            target.SaveOnes();
+            target.SetDiceArrayValues(2, 2, 6, 6, 6);
+            bool pass = target.SaveThreeKind();
             //Assert
-            Assert.AreEqual(1, target.RollScore);
+            Assert.True(pass);
+        }
 
-            target.SetDiceArrayValues(1, 2, 3, 4, 1);
-            target.RollScore = 0;
-            target.SaveOnes();
+        [Test]
+        public void SaveThreeKind2()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(4, 4, 4, 1, 1);
+            bool pass = target.SaveThreeKind();
             //Assert
-            Assert.AreEqual(2, target.RollScore);
+            Assert.True(pass);
+        }
+
+        [Test]
+        public void SaveThreeKind2Pairs()
+        {
+            //Arrange
+            Yahtzee target = new Yahtzee();
+
+            //Act
+            target.SetDiceArrayValues(2, 2, 6, 6, 1);
+            bool pass = target.SaveThreeKind();
+            //Assert
+            Assert.False(pass);
         }
         #endregion
     }
